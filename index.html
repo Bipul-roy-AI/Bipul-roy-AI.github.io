@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bipul Roy — Computational Geographer</title>
+<meta name="description" content="Bipul Roy — Computational geographer specializing in hydrology, remote sensing, and geospatial risk analysis.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy-deep:#0e2430;
+    --navy:#123244;
+    --navy-light:#1c4457;
+    --paper:#f2efe6;
+    --paper-dim:#e7e2d3;
+    --contour:#2e6e71;
+    --amber:#c8933f;
+    --rust:#a8542f;
+    --ink:#12201f;
+    --cream:#f7f4ea;
+    --line: rgba(242,239,230,0.14);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--navy-deep);
+    color:var(--paper);
+    font-family:'Inter',sans-serif;
+    font-size:16px;
+    line-height:1.6;
+  }
+  h1,h2,h3,h4{font-family:'Fraunces',serif; margin:0; letter-spacing:-0.01em;}
+  .mono{font-family:'IBM Plex Mono',monospace;}
+  a{color:inherit;}
+  ::selection{background:var(--amber); color:var(--navy-deep);}
+
+  @media (prefers-reduced-motion: no-preference){
+    .reveal{opacity:0; transform:translateY(16px); transition:opacity .7s ease, transform .7s ease;}
+    .reveal.in{opacity:1; transform:translateY(0);}
+  }
+
+  /* Contour background */
+  .contour-bg{
+    position:fixed; inset:0; z-index:0; pointer-events:none; opacity:0.35;
+  }
+
+  a:focus-visible, button:focus-visible{
+    outline:2px solid var(--amber); outline-offset:3px;
+  }
+
+  .wrap{max-width:1080px; margin:0 auto; padding:0 28px; position:relative; z-index:1;}
+
+  /* NAV */
+  nav{
+    position:sticky; top:0; z-index:50;
+    backdrop-filter: blur(10px);
+    background:rgba(14,36,48,0.82);
+    border-bottom:1px solid var(--line);
+  }
+  nav .wrap{display:flex; align-items:center; justify-content:space-between; padding-top:16px; padding-bottom:16px;}
+  .brand{font-family:'IBM Plex Mono',monospace; font-size:14px; letter-spacing:0.04em; color:var(--paper);}
+  .brand span{color:var(--amber);}
+  .navlinks{display:flex; gap:28px; list-style:none; margin:0; padding:0; font-family:'IBM Plex Mono',monospace; font-size:13px; text-transform:uppercase; letter-spacing:0.06em;}
+  .navlinks a{text-decoration:none; opacity:0.75; transition:opacity .2s, color .2s;}
+  .navlinks a:hover{opacity:1; color:var(--amber);}
+  .navtoggle{display:none; background:none; border:1px solid var(--line); color:var(--paper); padding:8px 10px; border-radius:4px; font-family:'IBM Plex Mono',monospace; cursor:pointer;}
+
+  /* HERO */
+  header.hero{position:relative; overflow:hidden; padding-top:96px; padding-bottom:88px;}
+  .coord{
+    font-family:'IBM Plex Mono',monospace; font-size:12.5px; color:var(--amber);
+    letter-spacing:0.08em; margin-bottom:20px; display:flex; gap:18px; flex-wrap:wrap; opacity:0.9;
+  }
+  .coord span{color:rgba(242,239,230,0.55);}
+  .hero-grid{display:grid; grid-template-columns:1.35fr 0.9fr; gap:56px; align-items:center;}
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace; text-transform:uppercase; font-size:12.5px;
+    letter-spacing:0.14em; color:var(--contour); margin-bottom:18px; display:block;
+  }
+  h1.name{font-size:clamp(2.6rem, 5.6vw, 4.6rem); font-weight:600; line-height:1.02; margin-bottom:20px;}
+  h1.name em{font-style:italic; font-weight:400; color:var(--amber);}
+  .role{font-size:clamp(1.05rem,1.6vw,1.3rem); color:var(--paper-dim); max-width:46ch; margin-bottom:32px; font-weight:400;}
+  .hero-cta{display:flex; gap:14px; flex-wrap:wrap;}
+  .btn{
+    display:inline-flex; align-items:center; gap:8px; padding:12px 22px; border-radius:2px;
+    font-family:'IBM Plex Mono',monospace; font-size:13px; text-transform:uppercase; letter-spacing:0.05em;
+    text-decoration:none; border:1px solid var(--amber); transition:background .2s, color .2s;
+  }
+  .btn.primary{background:var(--amber); color:var(--navy-deep);}
+  .btn.primary:hover{background:#dba659;}
+  .btn.ghost{color:var(--paper); border-color:var(--line);}
+  .btn.ghost:hover{border-color:var(--amber); color:var(--amber);}
+
+  .portrait-frame{
+    position:relative; border:1px solid var(--line); padding:10px;
+    background:linear-gradient(180deg, rgba(46,110,113,0.08), rgba(0,0,0,0));
+  }
+  .portrait-frame img{width:100%; display:block; filter:grayscale(15%) contrast(1.02);}
+  .portrait-tag{
+    position:absolute; bottom:-1px; left:-1px; right:-1px; background:var(--navy-deep);
+    border-top:1px solid var(--line); font-family:'IBM Plex Mono',monospace; font-size:11px;
+    padding:8px 12px; display:flex; justify-content:space-between; color:var(--paper-dim); letter-spacing:0.04em;
+  }
+  .portrait-tag b{color:var(--amber); font-weight:500;}
+
+  /* SECTION generic */
+  section{padding:84px 0; position:relative; border-top:1px solid var(--line);}
+  .sec-head{display:flex; align-items:baseline; gap:16px; margin-bottom:44px;}
+  .sec-num{font-family:'IBM Plex Mono',monospace; font-size:13px; color:var(--contour);}
+  .sec-title{font-size:clamp(1.7rem,3vw,2.3rem); font-weight:600;}
+  .sec-line{flex:1; height:1px; background:var(--line);}
+
+  /* ABOUT */
+  .about-grid{display:grid; grid-template-columns:1fr 1fr; gap:56px;}
+  .about-text p{color:var(--paper-dim); margin:0 0 18px; font-size:1.02rem;}
+  .stat-block{display:grid; grid-template-columns:1fr 1fr; gap:22px;}
+  .stat{border-left:2px solid var(--contour); padding-left:16px;}
+  .stat b{display:block; font-family:'Fraunces',serif; font-size:1.9rem; color:var(--amber); font-weight:600;}
+  .stat span{font-family:'IBM Plex Mono',monospace; font-size:11.5px; text-transform:uppercase; color:var(--paper-dim); letter-spacing:0.05em;}
+
+  /* EXPERIENCE */
+  .exp-item{display:grid; grid-template-columns:200px 1fr; gap:32px; padding:28px 0; border-bottom:1px solid var(--line);}
+  .exp-item:last-child{border-bottom:none;}
+  .exp-date{font-family:'IBM Plex Mono',monospace; font-size:12.5px; color:var(--contour); letter-spacing:0.04em; padding-top:4px;}
+  .exp-role{font-size:1.2rem; font-weight:600; margin-bottom:4px;}
+  .exp-org{font-family:'IBM Plex Mono',monospace; font-size:12.5px; color:var(--amber); margin-bottom:14px; letter-spacing:0.03em;}
+  .exp-item ul{margin:0; padding-left:18px; color:var(--paper-dim);}
+  .exp-item li{margin-bottom:8px; font-size:0.97rem;}
+
+  /* PROJECTS */
+  .proj-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:22px;}
+  .proj-card{
+    border:1px solid var(--line); padding:26px; background:rgba(255,255,255,0.015);
+    transition:border-color .2s, transform .2s;
+  }
+  .proj-card:hover{border-color:var(--contour); transform:translateY(-3px);}
+  .proj-tag{font-family:'IBM Plex Mono',monospace; font-size:11px; text-transform:uppercase; color:var(--contour); letter-spacing:0.06em; margin-bottom:12px; display:block;}
+  .proj-card h3{font-size:1.25rem; margin-bottom:10px; font-weight:600;}
+  .proj-card p{color:var(--paper-dim); font-size:0.95rem; margin:0 0 14px;}
+  .proj-card .imgph{
+    aspect-ratio:16/9; border:1px dashed var(--line); display:flex; align-items:center; justify-content:center;
+    font-family:'IBM Plex Mono',monospace; font-size:11px; color:rgba(242,239,230,0.35); margin-bottom:16px; letter-spacing:0.04em; text-align:center; padding:8px;
+  }
+  .proj-link{font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--amber); text-decoration:none; display:inline-flex; align-items:center; gap:6px;}
+  .proj-link:hover{text-decoration:underline;}
+
+  /* PUBLICATIONS */
+  .pub-item{padding:22px 0; border-bottom:1px solid var(--line); display:grid; grid-template-columns:90px 1fr; gap:24px;}
+  .pub-item:last-child{border-bottom:none;}
+  .pub-year{font-family:'IBM Plex Mono',monospace; color:var(--contour); font-size:13px; padding-top:2px;}
+  .pub-title{font-weight:600; font-size:1.08rem; margin-bottom:6px;}
+  .pub-meta{font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--amber); text-transform:uppercase; letter-spacing:0.04em; margin-bottom:8px;}
+  .pub-item p{color:var(--paper-dim); font-size:0.94rem; margin:0;}
+
+  /* SKILLS */
+  .skills-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:28px;}
+  .skill-cat h4{font-family:'IBM Plex Mono',monospace; font-size:12px; text-transform:uppercase; color:var(--contour); letter-spacing:0.06em; margin-bottom:14px; font-weight:500;}
+  .skill-cat ul{list-style:none; margin:0; padding:0;}
+  .skill-cat li{font-size:0.92rem; color:var(--paper-dim); padding:6px 0; border-bottom:1px solid var(--line);}
+  .skill-cat li:last-child{border-bottom:none;}
+
+  /* CONTACT */
+  .contact-grid{display:grid; grid-template-columns:1.1fr 0.9fr; gap:56px; align-items:start;}
+  .contact-list{list-style:none; margin:0; padding:0;}
+  .contact-list li{border-bottom:1px solid var(--line); padding:18px 0;}
+  .contact-list a{text-decoration:none; display:flex; justify-content:space-between; align-items:center; gap:12px;}
+  .contact-list .label{font-family:'IBM Plex Mono',monospace; font-size:11.5px; text-transform:uppercase; color:var(--paper-dim); letter-spacing:0.05em;}
+  .contact-list .val{font-size:1.02rem; transition:color .2s;}
+  .contact-list a:hover .val{color:var(--amber);}
+  .contact-note{color:var(--paper-dim); font-size:0.98rem;}
+
+  footer{padding:36px 0; text-align:center; font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:rgba(242,239,230,0.4); border-top:1px solid var(--line); letter-spacing:0.04em;}
+
+  @media (max-width:860px){
+    .navlinks{display:none;}
+    .navtoggle{display:block;}
+    .navlinks.open{
+      display:flex; position:absolute; top:100%; left:0; right:0; flex-direction:column;
+      background:var(--navy-deep); padding:20px 28px; border-bottom:1px solid var(--line); gap:16px;
+    }
+    .hero-grid{grid-template-columns:1fr; gap:40px;}
+    .portrait-frame{max-width:280px;}
+    .about-grid{grid-template-columns:1fr;}
+    .exp-item{grid-template-columns:1fr; gap:8px;}
+    .proj-grid{grid-template-columns:1fr;}
+    .skills-grid{grid-template-columns:repeat(2,1fr);}
+    .contact-grid{grid-template-columns:1fr;}
+    .pub-item{grid-template-columns:1fr; gap:6px;}
+  }
+</style>
+</head>
+<body>
+
+<svg class="contour-bg" viewBox="0 0 1440 1400" preserveAspectRatio="xMidYMin slice" xmlns="http://www.w3.org/2000/svg">
+  <g fill="none" stroke="#2e6e71" stroke-width="1">
+    <path d="M-100,180 C 200,120 400,240 700,160 S 1200,80 1600,180" opacity="0.5"/>
+    <path d="M-100,260 C 220,200 420,320 720,240 S 1180,160 1600,260" opacity="0.45"/>
+    <path d="M-100,340 C 240,280 440,400 740,320 S 1160,240 1600,340" opacity="0.4"/>
+    <path d="M-100,420 C 260,360 460,480 760,400 S 1140,320 1600,420" opacity="0.35"/>
+    <path d="M-100,500 C 280,440 480,560 780,480 S 1120,400 1600,500" opacity="0.3"/>
+    <path d="M-100,620 C 200,700 500,560 800,660 S 1250,760 1600,640" opacity="0.28" stroke="#c8933f"/>
+    <path d="M-100,700 C 220,780 520,640 820,740 S 1230,840 1600,720" opacity="0.24" stroke="#c8933f"/>
+    <path d="M-100,900 C 260,860 460,980 760,900 S 1160,820 1600,920" opacity="0.22"/>
+    <path d="M-100,1000 C 280,960 480,1080 780,1000 S 1120,920 1600,1020" opacity="0.2"/>
+    <path d="M-100,1120 C 300,1080 500,1200 800,1120 S 1100,1040 1600,1140" opacity="0.16"/>
+    <path d="M-100,1260 C 320,1220 520,1340 820,1260 S 1080,1180 1600,1280" opacity="0.12"/>
+  </g>
+</svg>
+
+<nav>
+  <div class="wrap">
+    <div class="brand">BIPUL ROY <span>/ GIS &amp; RS</span></div>
+    <ul class="navlinks" id="navlinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="navtoggle" id="navtoggle" aria-label="Toggle menu" aria-expanded="false">MENU</button>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="coord">22.3569° N <span>/</span> 91.7832° E <span>/ CHATTOGRAM, BANGLADESH</span></div>
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow">Computational Geographer</span>
+        <h1 class="name">Bipul<br>Roy<em>.</em></h1>
+        <p class="role">Mapping the ground truth beneath floods, wetlands, and disease — through hydrodynamic modelling, remote sensing, and spatial risk analysis across South Asia.</p>
+        <div class="hero-cta">
+          <a href="#research" class="btn primary">View Research</a>
+          <a href="#contact" class="btn ghost">Get in Touch</a>
+        </div>
+      </div>
+      <div class="portrait-frame reveal">
+        <img src="photo.jpg" alt="Portrait of Bipul Roy" width="800" height="1000">
+        <div class="portrait-tag"><span>FIG. 01</span><b>B. ROY</b></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">01</span><h2 class="sec-title">About</h2><div class="sec-line"></div></div>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>I'm a computational geographer working at the intersection of hydrology, remote sensing, and public health — currently a GIS Analyst at SPEKTER GmbH in Bavaria, Germany, where I build coupled 1D/2D flood models for municipal stormwater and river systems.</p>
+        <p>Alongside that, I'm a Research Assistant at the Space and Environment Research Centre (SERC) and an MS candidate in GIS for Environment and Development at Jahangirnagar University. My work spans wetland methane dynamics in Bangladesh's Haor basin, dengue risk mapping for Chattogram City Corporation, and forest phytosociology in Lawachara National Park — tying satellite data and field measurement to the environmental and health outcomes they actually drive.</p>
+      </div>
+      <div class="stat-block reveal">
+        <div class="stat"><b>2</b><span>Manuscripts under review</span></div>
+        <div class="stat"><b>90.7%</b><span>Dengue risk model accuracy</span></div>
+        <div class="stat"><b>3</b><span>Countries in current role &amp; field work</span></div>
+        <div class="stat"><b>C1</b><span>IELTS English proficiency</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">02</span><h2 class="sec-title">Experience</h2><div class="sec-line"></div></div>
+
+    <div class="exp-item reveal">
+      <div class="exp-date mono">JUL 2025 — PRESENT</div>
+      <div>
+        <div class="exp-role">GIS Analyst (Remote)</div>
+        <div class="exp-org">SPEKTER GMBH · BAVARIA, GERMANY</div>
+        <ul>
+          <li>Digitized and validated underground hydraulic infrastructure (pipes, culverts) in ArcGIS, integrating ALKIS, DEM, survey CAD/DWG, and urban network XML across German municipalities to establish 1D/2D hydraulic connectivity.</li>
+          <li>Coupled MIKE 11, MIKE 21FM, and MIKE+ models via MIKE FLOOD, resolving mesh-pipe elevation mismatches and validating zero-discrepancy coupling and Q-h discharge relationships for every culvert before simulation.</li>
+          <li>Ran post-simulation QA — water balance verification (±5% target) and pipe discharge evaluation — using Python preprocessing and SQLite/GDB spatial database integration for regulation-ready outputs.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-item reveal">
+      <div class="exp-date mono">FEB 2025 — PRESENT</div>
+      <div>
+        <div class="exp-role">Research Assistant</div>
+        <div class="exp-org">SPACE AND ENVIRONMENT RESEARCH CENTRE (SERC) · BANGLADESH</div>
+        <ul>
+          <li>Project: Estimating GHG Emissions (CH₄) from Rice Paddy Fields over Asia — quantified spatial-temporal methane emissions by integrating Sentinel-5P TROPOMI atmospheric data with SAR imagery across phenological stages of two rice-growing seasons.</li>
+          <li>Validated emission estimates through data collection, cleaning, and statistical analysis across multiple Asian rice-growing regions.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-item reveal">
+      <div class="exp-date mono">MAY 2024 — JUL 2025</div>
+      <div>
+        <div class="exp-role">Research Consultant</div>
+        <div class="exp-org">CEGIS · DHAKA, BANGLADESH</div>
+        <ul>
+          <li>GIS-Based Distribution Network System (Chattogram &amp; Mymensingh) — classified land use across 25 classes using UAV drone and WorldView-3 imagery to support electric distribution network planning.</li>
+          <li>Sustainable Forests &amp; Livelihoods (SUFAL) Project — developed a nationwide 33-class land cover map using SPOT-7/SPOT-5 imagery under ISO-standard LCCS, plus a hill-cutting and encroachment monitoring dataset validated through field ground-truthing across three districts.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-item reveal">
+      <div class="exp-date mono">FEB — MAR 2024</div>
+      <div>
+        <div class="exp-role">Field Researcher</div>
+        <div class="exp-org">SHAHJALAL UNIVERSITY OF SCIENCE &amp; TECHNOLOGY · SYLHET</div>
+        <ul>
+          <li>Designed a stratified sampling framework across five land-use zones and a control site to isolate tourism-induced environmental stressors at Kuakata Sea Beach, monitoring particulate emissions, noise levels, and water physicochemical parameters.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="research">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">03</span><h2 class="sec-title">Research &amp; Projects</h2><div class="sec-line"></div></div>
+
+    <div class="proj-grid">
+      <div class="proj-card reveal">
+        <span class="proj-tag">Current Research · SERC</span>
+        <h3>Wetland Methane Dynamics Under Flash Flood Disturbances</h3>
+        <div class="imgph">Figure / map placeholder — add project imagery here</div>
+        <p>Investigating methane dynamics in Tanguar Haor, integrating remote sensing and climate modelling to understand how flash flood disturbances drive wetland CH₄ emissions in Bangladesh's Haor basin.</p>
+      </div>
+
+      <div class="proj-card reveal">
+        <span class="proj-tag">Current Research · SERC</span>
+        <h3>Shoreline Dynamics &amp; Biological Cover in the Sundarbans</h3>
+        <div class="imgph">Figure / map placeholder — add project imagery here</div>
+        <p>A spatio-temporal assessment (2000–2025) coupling shoreline change detection with biological cover analysis across the Sundarbans mangrove forest.</p>
+      </div>
+
+      <div class="proj-card reveal">
+        <span class="proj-tag">Manuscript · Chattogram City Corporation</span>
+        <h3>Dengue Geospatial Risk Analysis</h3>
+        <div class="imgph">Figure / map placeholder — add project imagery here</div>
+        <p>Ward-level spatial epidemiology (n=41) using a 16-parameter AHP model to map dengue risk across Chattogram. Risk maps were adopted by Chattogram City Corporation for vector control (2024–2025), with 90.7% model accuracy.</p>
+      </div>
+
+      <div class="proj-card reveal">
+        <span class="proj-tag">Fieldwork · Lawachara National Park</span>
+        <h3>Phytosociology of Lawachara National Park</h3>
+        <div class="imgph">Figure / map placeholder — add project imagery here</div>
+        <p>Species diversity study across 38–39 tree species and 90 quadrats, producing full IVI, family-level parameters, diversity indices, and basal area calculations for publication.</p>
+      </div>
+
+      <div class="proj-card reveal">
+        <span class="proj-tag">Open Source · GitHub</span>
+        <h3>GEE LULC Research Engine</h3>
+        <div class="imgph">Figure / map placeholder — add project imagery here</div>
+        <p>A production-grade Google Earth Engine dashboard for land use / land cover classification, with automated multi-sensor selection (Landsat/Sentinel-2) and server-side K-fold cross-validation.</p>
+        <a class="proj-link" href="https://github.com/Bipul-roy-AI/gee-lulc-research-engine" target="_blank" rel="noopener">View repository →</a>
+      </div>
+
+      <div class="proj-card reveal">
+        <span class="proj-tag">Open Source · GitHub</span>
+        <h3>GEE Water Balance &amp; Recharge Estimation</h3>
+        <div class="imgph">Figure / map placeholder — add project imagery here</div>
+        <p>A national-scale groundwater recharge model for Bangladesh using an FAO-style vertical water balance approach (IMERG, MODIS ET, GLDAS), scoped as a documented screening-level tool.</p>
+        <a class="proj-link" href="https://github.com/Bipul-roy-AI/gee-water-balance-recharge-bangladesh" target="_blank" rel="noopener">View repository →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="publications">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">04</span><h2 class="sec-title">Publications</h2><div class="sec-line"></div></div>
+
+    <div class="pub-item reveal">
+      <div class="pub-year mono">2025</div>
+      <div>
+        <div class="pub-title">Decades of Transformation: Quantifying the Effects of Urbanisation on the Hydroclimate of Dhaka, Bangladesh</div>
+        <div class="pub-meta">Saha, G., Rafi, Roy, B. · Under Review</div>
+        <p>LULC change detection (1980–2023) via Google Earth Engine combined with multivariate regression on climate records; finds Dhaka's built-up area expanded more than 7× since 1980, with a warming trend of ~0.21°C per decade linked to urban heat island intensification.</p>
+      </div>
+    </div>
+
+    <div class="pub-item reveal">
+      <div class="pub-year mono">2025</div>
+      <div>
+        <div class="pub-title">Vector-Borne Infectious Diseases of Chattogram City: A Geo-Spatial Investigation on Dengue-Infected Patients and Breeding Sites of Aedes Mosquitoes</div>
+        <div class="pub-meta">Roy, B., Barua, E., Koley, N. J. (Corresponding Author) · Pre-print</div>
+        <p>Ward-level spatial epidemiology using a 16-parameter AHP model and Poisson regression; identified six very-high-risk wards, with low-elevation, high-density wards accounting for 68% of cases on 35% of land area. Risk maps adopted by Chattogram City Corporation for vector control.</p>
+      </div>
+    </div>
+
+    <div class="pub-item reveal">
+      <div class="pub-year mono">2024</div>
+      <div>
+        <div class="pub-title">Spatial Dynamics of Environment, Socioeconomics &amp; Public Health in Urban Transport Hubs: A Case Study in Sylhet City Corporation</div>
+        <div class="pub-meta">Poster Presentation · RURS 1st ISCRF-2024, Rajshahi University</div>
+        <p>Presented at the RURS 1st International Student Conference and Research Fair.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">05</span><h2 class="sec-title">Skills</h2><div class="sec-line"></div></div>
+    <div class="skills-grid">
+      <div class="skill-cat reveal">
+        <h4>GIS &amp; Remote Sensing</h4>
+        <ul>
+          <li>ArcGIS Pro / Desktop</li>
+          <li>QGIS</li>
+          <li>Google Earth Engine</li>
+          <li>ENVI</li>
+          <li>Civil 3D</li>
+          <li>SAR &amp; multi-sensor processing</li>
+        </ul>
+      </div>
+      <div class="skill-cat reveal">
+        <h4>Hydrodynamic Modelling</h4>
+        <ul>
+          <li>MIKE 11 / 21FM / Urban / FLOOD / +</li>
+          <li>HEC-RAS</li>
+          <li>SMS</li>
+          <li>1D/2D coupled simulation</li>
+          <li>Mesh generation &amp; validation</li>
+        </ul>
+      </div>
+      <div class="skill-cat reveal">
+        <h4>Programming &amp; Data</h4>
+        <ul>
+          <li>Python</li>
+          <li>GEE JavaScript API</li>
+          <li>SQL / SQLite / GDB</li>
+        </ul>
+      </div>
+      <div class="skill-cat reveal">
+        <h4>Survey &amp; Statistics</h4>
+        <ul>
+          <li>IBM SPSS</li>
+          <li>ArcGIS Survey123</li>
+          <li>KoBoToolbox</li>
+          <li>Statistical analysis &amp; reporting</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">06</span><h2 class="sec-title">Contact</h2><div class="sec-line"></div></div>
+    <div class="contact-grid">
+      <div class="reveal">
+        <p class="contact-note">Based in Chattogram, Bangladesh — open to research collaborations, graduate opportunities, and geospatial / hydrodynamic modelling work.</p>
+      </div>
+      <ul class="contact-list reveal">
+        <li><a href="mailto:bipulroyedu@gmail.com"><span class="label">Email</span><span class="val">bipulroyedu@gmail.com</span></a></li>
+        <li><a href="mailto:sommojitroy@gmail.com"><span class="label">Email (alt)</span><span class="val">sommojitroy@gmail.com</span></a></li>
+        <li><a href="https://www.linkedin.com/in/bipul-roy-635140171/" target="_blank" rel="noopener"><span class="label">LinkedIn</span><span class="val">/in/bipul-roy</span></a></li>
+        <li><a href="https://github.com/Bipul-roy-AI" target="_blank" rel="noopener"><span class="label">GitHub</span><span class="val">@Bipul-roy-AI</span></a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer>
+  BIPUL ROY — GIS &amp; REMOTE SENSING · CHATTOGRAM, BANGLADESH · <span id="year"></span>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const toggle = document.getElementById('navtoggle');
+  const links = document.getElementById('navlinks');
+  toggle.addEventListener('click', () => {
+    const open = links.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open);
+  });
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    links.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+  }));
+
+  if (window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, {threshold:0.12});
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  } else {
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
+  }
+</script>
+
+</body>
+</html>
