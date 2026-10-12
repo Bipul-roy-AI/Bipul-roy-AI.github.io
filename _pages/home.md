@@ -43,4 +43,4 @@ I am a GIS Analyst working with hydrodynamic models and spatial infrastructure d
 
 My interests include river and urban flood processes, satellite-based land and water monitoring, environmental change, spatial epidemiology, and open-source geospatial software.
 
-Read more [about my work]({{ '/about/' | relative_url }}) or explore my [research]({{ '/research/' | relative_url }}) and [software projects]({{ '/software/' | relative_url }}).
+Read more [about my work]({{ '/about/' | relative_url }}) or explore my [research]({{ '/research/' | relative_url }}) my [projects]({{ '/projects/' | relative_url }}) and [software skills]({{ '/software/' | relative_url }}).

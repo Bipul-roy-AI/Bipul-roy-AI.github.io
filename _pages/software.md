@@ -6,22 +6,26 @@ permalink: /software/
 
 # Software
 
-{% for project in site.data.software %}
-<div class="section-card" markdown="0">
-<h2>{{ project.name }}</h2>
-{% if project.website or project.repo or project.docs or project.paper %}
-<div class="pub-actions" style="margin-bottom: var(--space-3);">
-{% if project.website %}<a href="{{ project.website }}" target="_blank" class="btn-pill btn-website">Website</a>{% endif %}
-{% if project.repo %}<a href="{{ project.repo }}" target="_blank" class="btn-pill btn-git">Code</a>{% endif %}
-{% if project.docs %}<a href="{{ project.docs }}" target="_blank" class="btn-pill btn-link">Docs</a>{% endif %}
-{% if project.paper %}<a href="{{ project.paper }}" target="_blank" class="btn-pill btn-link">Paper</a>{% endif %}
-</div>
-{% endif %}
-{% if project.authors %}<p><strong>Authors:</strong> <em>{{ project.authors }}</em></p>{% endif %}
-<p>{{ project.description }}</p>
-</div>
-{% endfor %}
+Technical expertise in GIS, hydrodynamic modelling, Earth observation, programming, statistics, survey tools and GeoAI.
 
-{% unless site.data.software.size > 0 %}
-<p class="text-muted">No software listed yet. Add entries to <code>_data/software.yml</code>.</p>
-{% endunless %}
+<div class="section-card">
+<h2>GIS &amp; Modeling</h2>
+<p>ArcGIS (Pro/Desktop), QGIS, EPANET, ERDAS IMAGINE, Google Earth Engine (GEE), HEC-RAS, SMS, DHI MIKE 11, MIKE 21FM, MIKE Urban, MIKE+, Google Earth Pro, Civil 3D, Jupyter Notebook.</p>
+</div>
+
+<div class="section-card">
+<h2>Programming &amp; Data</h2>
+<p>Python (Pandas, NumPy, GeoPandas), SQL, Machine Learning (SVM, XGBoost, CNN).</p>
+</div>
+
+<div class="section-card">
+<h2>Statistics &amp; Survey</h2>
+<p>IBM SPSS, NVivo, R programming, Data Collection (ArcGIS Survey123, KoBoToolbox, Google Forms), Statistical Analysis and Reporting.</p>
+</div>
+
+<div class="section-card">
+<h2>AI</h2>
+<p>GeoAI Image Segmentation, Automation.</p>
+</div>
+
+<p>Explore the related open-source tools on my <a href="{{ '/projects/' | relative_url }}">Projects page &rarr;</a>.</p>
