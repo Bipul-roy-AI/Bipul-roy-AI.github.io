@@ -8,7 +8,7 @@ permalink: /about/
 
 <div class="section-card">
 <div class="pi-card">
-<img src="{{ site.photo | prepend: '/images/' | relative_url }}" class="pi-photo" alt="Bipul Roy portrait" width="160" height="160">
+<img src="{{ site.photo | prepend: '/images/' | relative_url }}" class="pi-photo" alt="Bipul Roy portrait" width="128" height="128">
 <div>
 <h2 class="pi-name">Bipul Roy</h2>
 <p class="text-muted">Computational Geographer · GIS Analyst · Graduate Researcher</p>

@@ -1,7 +1,7 @@
 # Bipul Roy — adapted from sbryngelson/academic-website-template (MIT)
 name: "Bipul Roy"
 title: "Computational Geographer"
-institution: "GIS Analyst · Research Assistant · Graduate Researcher"
+institution: "Jahangirnagar University"
 email: "bipulroyedu@gmail.com"
 photo: "bipul-roy.jpg"
 lang: en
@@ -13,7 +13,7 @@ links:
   twitter: ""
   linkedin: "https://www.linkedin.com/in/bipul-roy-635140171/"
   cv: ""
-accent_color: "#147c79"
+accent_color: "#1a7a6d"
 dark_mode: true
 math: false
 description: "Bipul Roy — computational geography, hydrodynamic modelling, satellite remote sensing, GIS, and environmental data science."
