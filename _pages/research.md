@@ -37,10 +37,7 @@ I study environmental systems through GIS, hydrodynamic modelling, spatial analy
 <img src="{{ '/images/research/lulc.svg' | relative_url }}" class="research-thumb" alt="Illustration of classified land-cover pixels" width="400" height="200">
 <div class="research-body"><h2 class="research-title">Land-cover classification &amp; uncertainty</h2><p class="research-desc">Sentinel/Landsat classification, cross-validation and uncertainty-aware Google Earth Engine workflows.</p><p><a href="https://github.com/Bipul-roy-AI/gee-lulc-research-engine">View research engine →</a></p></div>
 </div>
-<div class="research-card">
-<img src="{{ '/images/research/water.svg' | relative_url }}" class="research-thumb" alt="Illustration of rainfall, river and basin relief" width="400" height="200">
-<div class="research-body"><h2 class="research-title">Watershed water balance &amp; recharge</h2><p class="research-desc">Integrating precipitation, evapotranspiration, runoff and storage data for regional screening and comparison.</p><p><a href="https://github.com/Bipul-roy-AI/gee-water-balance-recharge-bangladesh">View recharge model →</a></p></div>
-</div>
+
 </div>
 
 <section class="research-feature" id="hakaluki-results" markdown="0">
