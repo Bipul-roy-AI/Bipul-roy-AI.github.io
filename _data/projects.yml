@@ -3,9 +3,12 @@
 - name: GEE LULC Research Engine
   repo: https://github.com/Bipul-roy-AI/gee-lulc-research-engine
   description: "Automated Google Earth Engine land-cover classification with Sentinel-2 and Landsat imagery, supervised classifiers, cross-validation and uncertainty outputs."
-- name: Universal Satellite LST Calculator
+- name: Automated Land Surface Temperature (LST) Mapping
   repo: https://github.com/Bipul-roy-AI/Automated-Land-Surface-Temperature-LST-Mapping
-  description: "Sensor-aware Python pipeline for land-surface temperature retrieval and processing across Landsat, ASTER, MODIS and ECOSTRESS."
+  description: "Python toolkit for Landsat 8/9, MODIS, ASTER and ECOSTRESS LST mapping, atmospheric correction, cloud masking, batch processing, and experimental spatial downscaling and temperature-trend analysis."
+  screenshots:
+    - src: https://raw.githubusercontent.com/Bipul-roy-AI/Automated-Land-Surface-Temperature-LST-Mapping/main/screenshots/LST_LANDSAT_L2ST_LC08_L2SP_136045_20260119_02_T1_ST_B10.png
+      caption: "Landsat 8 Level-2 LST map and temperature distribution for Chattogram, Bangladesh"
 - name: Sentinel Data Toolbox for QGIS
   repo: https://github.com/Bipul-roy-AI/qgis-sentinel-toolbox
   description: "QGIS plugin for discovering, preprocessing, analysing and quality-checking Sentinel-1 SAR and Sentinel-2 imagery."
