@@ -273,3 +273,18 @@ a.software-item:hover, a.software-item:focus-visible {
   }
   .experience-logo { max-height: 115px; }
 }
+
+
+// Uploaded artwork, in three 64px sprite cells: ArcGIS Pro, GeoAI, general AI.
+// Fallback monograms are deliberately hidden only for these three image-backed icons.
+.software-custom-icon {
+  background-image: url('/images/software/user-supplied-ai-logos.png');
+  background-repeat: no-repeat;
+  background-size: 192px 64px;
+  background-color: #fff;
+  border-color: rgba(0,0,0,.12);
+}
+.software-custom-icon--arcgis { background-position: -1px -1px; }
+.software-custom-icon--geoai { background-position: -65px -1px; }
+.software-custom-icon--ai { background-position: -129px -1px; }
+.software-custom-icon .software-monogram { display: none; }
