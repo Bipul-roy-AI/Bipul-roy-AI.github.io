@@ -93,3 +93,28 @@
     }
   }
 }
+
+// Wider pair of figures for district-scale LST mapping (other cards unchanged).
+.section-card.project-card .project-demos.lst-demo-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  overflow-x: visible;
+  .project-demo {
+    width: auto;
+    min-width: 0;
+    img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1.9 / 1;
+      object-fit: contain;
+      object-position: center;
+    }
+    figcaption { font-size: 0.8rem; }
+  }
+}
+@media (max-width: 680px) {
+  .section-card.project-card .project-demos.lst-demo-pair {
+    grid-template-columns: 1fr;
+  }
+}
