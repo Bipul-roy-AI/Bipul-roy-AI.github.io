@@ -8,12 +8,12 @@ permalink: /software/
 
 Technical expertise in GIS, hydrodynamic modelling, Earth observation, programming, statistics, survey tools and GeoAI.
 
-<p class="software-page-note">Software and platform names are accompanied by recognizable project or vendor brand marks where available. Methods and tools without a verified product-specific logo use neutral letter icons. Select a named product to visit its official website.</p>
+<p class="software-page-note">Software, GIS and analytical methods used in my work. Product logos identify their respective tools; methodological skills use thematic symbols rather than fictitious vendor branding.</p>
 
 <section class="section-card software-section" markdown="0">
 <h2>GIS &amp; Modeling</h2>
 <div class="software-grid">
-<a class="software-item" href="https://www.esri.com/en-us/arcgis/products/arcgis-pro/overview" target="_blank" rel="noopener noreferrer"><span class="software-logo-box"><img class="software-logo" src="https://cdn.simpleicons.org/arcgis" alt="ArcGIS Pro / Desktop brand mark" loading="lazy" decoding="async" onerror="this.style.display='none'"><span class="software-monogram" aria-hidden="true">AR</span></span><span class="software-label">ArcGIS Pro / Desktop</span></a>
+<a class="software-item" href="https://www.esri.com/en-us/arcgis/products/arcgis-pro/overview" target="_blank" rel="noopener noreferrer"><span class="software-logo-box software-custom-icon software-custom-icon--arcgis"><span class="software-monogram" aria-hidden="true">AR</span></span><span class="software-label">ArcGIS Pro / Desktop</span></a>
 <a class="software-item" href="https://qgis.org/" target="_blank" rel="noopener noreferrer"><span class="software-logo-box"><img class="software-logo" src="https://cdn.simpleicons.org/qgis" alt="QGIS brand mark" loading="lazy" decoding="async" onerror="this.style.display='none'"><span class="software-monogram" aria-hidden="true">QG</span></span><span class="software-label">QGIS</span></a>
 <a class="software-item" href="https://hexagon.com/products/erdas-imagine" target="_blank" rel="noopener noreferrer"><span class="software-logo-box"><span class="software-monogram" aria-hidden="true">ER</span></span><span class="software-label">ERDAS IMAGINE</span></a>
 <a class="software-item" href="https://earthengine.google.com/" target="_blank" rel="noopener noreferrer"><span class="software-logo-box"><img class="software-logo" src="{{ '/images/software/google-earth-engine.png' | relative_url }}" alt="Google Earth Engine logo" loading="lazy" decoding="async" onerror="this.style.display='none'"><span class="software-monogram" aria-hidden="true">GO</span></span><span class="software-label">Google Earth Engine</span></a>
@@ -45,24 +45,18 @@ Technical expertise in GIS, hydrodynamic modelling, Earth observation, programmi
 </section>
 
 <section class="section-card software-section" markdown="0">
-<h2>Statistics &amp; Survey</h2>
+<h2>Statistics</h2>
 <div class="software-grid">
-<a class="software-item" href="https://www.ibm.com/products/spss-statistics" target="_blank" rel="noopener noreferrer"><span class="software-logo-box"><img class="software-logo" src="https://cdn.simpleicons.org/ibm" alt="IBM SPSS Statistics brand mark" loading="lazy" decoding="async" onerror="this.style.display='none'"><span class="software-monogram" aria-hidden="true">IB</span></span><span class="software-label">IBM SPSS Statistics</span></a>
-<a class="software-item" href="https://lumivero.com/products/nvivo/" target="_blank" rel="noopener noreferrer"><span class="software-logo-box"><span class="software-monogram" aria-hidden="true">NV</span></span><span class="software-label">NVivo</span></a>
 <a class="software-item" href="https://www.r-project.org/" target="_blank" rel="noopener noreferrer"><span class="software-logo-box"><img class="software-logo" src="https://cdn.simpleicons.org/r" alt="R programming brand mark" loading="lazy" decoding="async" onerror="this.style.display='none'"><span class="software-monogram" aria-hidden="true">R </span></span><span class="software-label">R programming</span></a>
-<a class="software-item" href="https://survey123.arcgis.com/" target="_blank" rel="noopener noreferrer"><span class="software-logo-box"><img class="software-logo" src="https://cdn.simpleicons.org/arcgis" alt="ArcGIS Survey123 brand mark" loading="lazy" decoding="async" onerror="this.style.display='none'"><span class="software-monogram" aria-hidden="true">AR</span></span><span class="software-label">ArcGIS Survey123</span></a>
-<a class="software-item" href="https://www.kobotoolbox.org/" target="_blank" rel="noopener noreferrer"><span class="software-logo-box"><img class="software-logo" src="https://cdn.simpleicons.org/kobotoolbox" alt="KoBoToolbox brand mark" loading="lazy" decoding="async" onerror="this.style.display='none'"><span class="software-monogram" aria-hidden="true">KO</span></span><span class="software-label">KoBoToolbox</span></a>
-<a class="software-item" href="https://www.google.com/forms/about/" target="_blank" rel="noopener noreferrer"><span class="software-logo-box"><img class="software-logo" src="https://cdn.simpleicons.org/googleforms" alt="Google Forms brand mark" loading="lazy" decoding="async" onerror="this.style.display='none'"><span class="software-monogram" aria-hidden="true">GO</span></span><span class="software-label">Google Forms</span></a>
-<div class="software-item"><span class="software-logo-box"><span class="software-monogram" aria-hidden="true">ST</span></span><span class="software-label">Statistical analysis &amp; reporting</span></div>
 </div>
 </section>
 
 <section class="section-card software-section" markdown="0">
 <h2>AI &amp; GeoAI</h2>
 <div class="software-grid">
-<div class="software-item"><span class="software-logo-box"><span class="software-monogram" aria-hidden="true">GE</span></span><span class="software-label">GeoAI image segmentation</span></div>
-<div class="software-item"><span class="software-logo-box"><span class="software-monogram" aria-hidden="true">GE</span></span><span class="software-label">Geospatial automation</span></div>
-<div class="software-item"><span class="software-logo-box"><span class="software-monogram" aria-hidden="true">DE</span></span><span class="software-label">Deep-learning workflows</span></div>
+<div class="software-item"><span class="software-logo-box software-custom-icon software-custom-icon--geoai"><span class="software-monogram" aria-hidden="true">GE</span></span><span class="software-label">GeoAI image segmentation</span></div>
+<div class="software-item"><span class="software-logo-box software-custom-icon software-custom-icon--ai"><span class="software-monogram" aria-hidden="true">GE</span></span><span class="software-label">Geospatial automation</span></div>
+<div class="software-item"><span class="software-logo-box software-custom-icon software-custom-icon--ai"><span class="software-monogram" aria-hidden="true">DE</span></span><span class="software-label">Deep learning</span></div>
 </div>
 </section>
 
