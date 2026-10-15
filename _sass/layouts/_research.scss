@@ -288,3 +288,19 @@ a.software-item:hover, a.software-item:focus-visible {
 .software-custom-icon--geoai { background-position: -65px -1px; }
 .software-custom-icon--ai { background-position: -129px -1px; }
 .software-custom-icon .software-monogram { display: none; }
+
+
+// User-supplied statistics and survey brand images, packed in five 48px cells.
+.software-stats-sprite {
+  background-color: #fff;
+  background-image: url('/images/software/statistics-survey-logos.webp');
+  background-repeat: no-repeat;
+  background-size: 310px 62px;
+  border-color: rgba(0, 0, 0, 0.12);
+}
+.software-stats-sprite--ibm { background-position: 0 0; }
+.software-stats-sprite--nvivo { background-position: -62px 0; }
+.software-stats-sprite--survey123 { background-position: -124px 0; }
+.software-stats-sprite--forms { background-position: -186px 0; }
+.software-stats-sprite--kobo { background-position: -248px 0; }
+.software-stats-sprite .software-monogram { display: none; }
