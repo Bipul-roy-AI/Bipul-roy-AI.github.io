@@ -45,9 +45,14 @@ Technical expertise in GIS, hydrodynamic modelling, Earth observation, programmi
 </section>
 
 <section class="section-card software-section" markdown="0">
-<h2>Statistics</h2>
+<h2>Statistics &amp; Survey</h2>
 <div class="software-grid">
 <a class="software-item" href="https://www.r-project.org/" target="_blank" rel="noopener noreferrer"><span class="software-logo-box"><img class="software-logo" src="https://cdn.simpleicons.org/r" alt="R programming brand mark" loading="lazy" decoding="async" onerror="this.style.display='none'"><span class="software-monogram" aria-hidden="true">R </span></span><span class="software-label">R programming</span></a>
+<a class="software-item" href="https://www.ibm.com/products/spss-statistics" target="_blank" rel="noopener noreferrer"><span class="software-logo-box"><img class="software-logo" src="https://cdn.simpleicons.org/ibm/1261A0" alt="IBM SPSS Statistics brand icon" loading="lazy" decoding="async" onerror="this.style.display='none'"><span class="software-monogram" aria-hidden="true">IB</span></span><span class="software-label">IBM SPSS Statistics</span></a>
+<a class="software-item" href="https://lumivero.com/products/nvivo/" target="_blank" rel="noopener noreferrer"><span class="software-logo-box"><img class="software-logo" src="https://www.google.com/s2/favicons?domain=lumivero.com&sz=128" alt="NVivo brand icon" loading="lazy" decoding="async" onerror="this.style.display='none'"><span class="software-monogram" aria-hidden="true">NV</span></span><span class="software-label">NVivo</span></a>
+<a class="software-item" href="https://survey123.arcgis.com/" target="_blank" rel="noopener noreferrer"><span class="software-logo-box"><img class="software-logo" src="https://www.google.com/s2/favicons?domain=survey123.arcgis.com&sz=128" alt="ArcGIS Survey123 brand icon" loading="lazy" decoding="async" onerror="this.style.display='none'"><span class="software-monogram" aria-hidden="true">SU</span></span><span class="software-label">ArcGIS Survey123</span></a>
+<a class="software-item" href="https://www.kobotoolbox.org/" target="_blank" rel="noopener noreferrer"><span class="software-logo-box"><img class="software-logo" src="https://www.google.com/s2/favicons?domain=kobotoolbox.org&sz=128" alt="KoBoToolbox brand icon" loading="lazy" decoding="async" onerror="this.style.display='none'"><span class="software-monogram" aria-hidden="true">KO</span></span><span class="software-label">KoBoToolbox</span></a>
+<a class="software-item" href="https://www.google.com/forms/about/" target="_blank" rel="noopener noreferrer"><span class="software-logo-box"><img class="software-logo" src="https://cdn.simpleicons.org/googleforms/7248B9" alt="Google Forms brand icon" loading="lazy" decoding="async" onerror="this.style.display='none'"><span class="software-monogram" aria-hidden="true">GO</span></span><span class="software-label">Google Forms</span></a>
 </div>
 </section>
 
