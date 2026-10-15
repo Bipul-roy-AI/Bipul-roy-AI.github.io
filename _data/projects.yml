@@ -9,6 +9,8 @@
   screenshots:
     - src: https://raw.githubusercontent.com/Bipul-roy-AI/Automated-Land-Surface-Temperature-LST-Mapping/main/screenshots/LST_LANDSAT_L2ST_LC08_L2SP_136045_20260119_02_T1_ST_B10.png
       caption: "Landsat 8 Level-2 LST map and temperature distribution for Chattogram, Bangladesh"
+    - src: https://raw.githubusercontent.com/Bipul-roy-AI/Automated-Land-Surface-Temperature-LST-Mapping/main/screenshots/dhaka_district_lst_map_and_histogram.png
+      caption: "Dhaka District Landsat Level-2 LST map and cloud-screened temperature distribution (11 February 2026)"
 - name: Sentinel Data Toolbox for QGIS
   repo: https://github.com/Bipul-roy-AI/qgis-sentinel-toolbox
   description: "QGIS plugin for discovering, preprocessing, analysing and quality-checking Sentinel-1 SAR and Sentinel-2 imagery."
