@@ -225,3 +225,51 @@ a.software-item:hover, a.software-item:focus-visible {
   .software-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .software-item { min-height: 115px; }
 }
+
+
+// Experience page — organization logos aligned to the right on desktop.
+.experience-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(165px, 235px);
+  gap: clamp(1.25rem, 3.5vw, 3.25rem);
+  align-items: center;
+}
+.experience-content { min-width: 0; }
+.experience-logo-panel {
+  background: #f7f9fa;
+  border: 1px solid rgba(0, 0, 0, 0.09);
+  border-radius: 18px;
+  padding: 1.2rem;
+  min-width: 0;
+  min-height: 145px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.experience-logo {
+  display: block;
+  width: 100%;
+  max-width: 210px;
+  max-height: 155px;
+  object-fit: contain;
+}
+.experience-logo--square { max-width: 155px; }
+.experience-logo--wide { max-width: 210px; }
+.experience-logo-fallback {
+  font-weight: 750;
+  font-size: 1.1rem;
+  letter-spacing: 0.07em;
+  color: #192b35;
+  text-align: center;
+}
+@media (max-width: 700px) {
+  .experience-card {
+    grid-template-columns: 1fr;
+  }
+  .experience-logo-panel {
+    min-height: 105px;
+    max-width: 250px;
+    padding: 0.85rem;
+  }
+  .experience-logo { max-height: 115px; }
+}
