@@ -304,3 +304,18 @@ a.software-item:hover, a.software-item:focus-visible {
 .software-stats-sprite--forms { background-position: -186px 0; }
 .software-stats-sprite--kobo { background-position: -248px 0; }
 .software-stats-sprite .software-monogram { display: none; }
+
+
+// User-supplied programming logos, four 64px tiles in a local WebP sprite.
+.software-programming-icon {
+  background-color: #fff;
+  background-image: url('/images/software/programming-logos.webp');
+  background-repeat: no-repeat;
+  background-size: 256px 64px;
+  border-color: rgba(0,0,0,.12);
+}
+.software-programming-icon--python { background-position: 0 0; }
+.software-programming-icon--geopandas { background-position: -64px 0; }
+.software-programming-icon--numpy { background-position: -128px 0; }
+.software-programming-icon--sql { background-position: -192px 0; }
+.software-programming-icon .software-monogram { display:none; }
