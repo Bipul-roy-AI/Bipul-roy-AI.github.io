@@ -19,7 +19,7 @@ permalink: /projects/
 </div>
 {% endif %}
 {% if project.screenshots and project.screenshots.size > 0 %}
-<div class="project-demos">
+<div class="project-demos{% if project.name == 'Automated Land Surface Temperature (LST) Mapping' %} lst-demo-pair{% endif %}">
 {% for shot in project.screenshots %}
 <figure class="project-demo">
 <a href="{{ shot.src | relative_url }}" target="_blank" rel="noopener noreferrer"><img src="{{ shot.src | relative_url }}" alt="{{ project.name }}: {{ shot.caption | default: 'demo screenshot' | escape }}" loading="lazy" decoding="async"></a>
