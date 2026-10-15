@@ -41,3 +41,47 @@
     font-size: 1.375rem;
   }
 }
+
+// Projects page: description, repo link, then demo pictures
+.project-card {
+  .project-desc {
+    margin-bottom: var(--space-3);
+  }
+  .project-links {
+    margin-bottom: var(--space-4);
+  }
+}
+
+.project-demos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: var(--space-4);
+  margin-top: var(--space-4);
+}
+
+.project-demo {
+  margin: 0;
+
+  a {
+    display: block;
+  }
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    background: #fff;
+    transition: box-shadow var(--transition-slow);
+  }
+  a:hover img {
+    box-shadow: var(--shadow-lg);
+  }
+  figcaption {
+    margin-top: var(--space-2);
+    font-size: 0.8125rem;
+    line-height: 1.4;
+    color: var(--text-muted, inherit);
+  }
+}

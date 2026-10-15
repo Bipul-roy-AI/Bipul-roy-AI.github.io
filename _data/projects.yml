@@ -1,33 +1,35 @@
 # Open-source projects from the author's public GitHub repositories.
+# Optional per project: screenshots (list of {src, caption}) shown as demo pictures.
 - name: GEE LULC Research Engine
-  authors: Bipul Roy
   repo: https://github.com/Bipul-roy-AI/gee-lulc-research-engine
   description: "Automated Google Earth Engine land-cover classification with Sentinel-2 and Landsat imagery, supervised classifiers, cross-validation and uncertainty outputs."
 - name: Universal Satellite LST Calculator
-  authors: Bipul Roy
   repo: https://github.com/Bipul-roy-AI/Automated-Land-Surface-Temperature-LST-Mapping
   description: "Sensor-aware Python pipeline for land-surface temperature retrieval and processing across Landsat, ASTER, MODIS and ECOSTRESS."
 - name: Sentinel Data Toolbox for QGIS
-  authors: Bipul Roy
   repo: https://github.com/Bipul-roy-AI/qgis-sentinel-toolbox
   description: "QGIS plugin for discovering, preprocessing, analysing and quality-checking Sentinel-1 SAR and Sentinel-2 imagery."
+  screenshots:
+    - src: /images/projects/qgis-sentinel-toolbox/search-download.png
+      caption: "Search & Download: pick an AOI and date range, then fetch Sentinel-1 scenes"
+    - src: /images/projects/qgis-sentinel-toolbox/preprocess.png
+      caption: "Preprocess: dB conversion, Lee speckle filter and land/water mask"
+    - src: /images/projects/qgis-sentinel-toolbox/quick-analysis.png
+      caption: "Quick Analysis: oil spill detection with fixed threshold or CA-CFAR"
+    - src: /images/projects/qgis-sentinel-toolbox/settings.png
+      caption: "Settings: default folders and analysis thresholds"
 - name: Watershed Rainfall Analyzer
-  authors: Bipul Roy
   repo: https://github.com/Bipul-roy-AI/watershed-rainfall-analysis
   description: "Basin area-weighted rainfall zonal statistics, no-data safeguards and trend analysis for hydrological workflows."
 - name: Bangladesh Water Balance & Recharge
-  authors: Bipul Roy
   repo: https://github.com/Bipul-roy-AI/gee-water-balance-recharge-bangladesh
   description: "Satellite-based annual potential groundwater recharge screening model incorporating rainfall, ET, runoff and seasonal storage change."
 - name: Topographic Soil Moisture Controls
-  authors: Bipul Roy
   repo: https://github.com/Bipul-roy-AI/topographic-soil-moisture-controls
   description: "Methodological demonstration of terrain-based Random Forest models and spatial cross-validation with a synthetic—not observed—soil moisture proxy."
 - name: Bangladesh Surface-Water Dynamics
-  authors: Bipul Roy
   repo: https://github.com/Bipul-roy-AI/Bangladesh-surface-water-analysis
   description: "Monsoon-sensitive remote sensing for monitoring seasonal water extent and water-body transitions in the Bangladesh Delta."
 - name: Dhaka Air Pollution Climate Health Intelligence
-  authors: Bipul Roy
   repo: https://github.com/Bipul-roy-AI/Dhaka-Air-Pollution-Climate-Health-Intelligence
   description: "Environmental data-science framework integrating air-quality observations, satellite products and climate reanalysis time series."
