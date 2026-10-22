@@ -38,3 +38,21 @@
 - name: Dhaka Air Pollution Climate Health Intelligence
   repo: https://github.com/Bipul-roy-AI/Dhaka-Air-Pollution-Climate-Health-Intelligence
   description: "Environmental data-science framework integrating air-quality observations, satellite products and climate reanalysis time series."
+- name: Pipe Culvert Mesh Tool
+  repo: https://github.com/Bipul-roy-AI/Pipe-Culvert-Mesh-Tool
+  description: "ArcMap toolbox that fills pipe and culvert inflow and outflow levels from mesh elevations, using pipe direction and a configurable search distance."
+  screenshots:
+    - src: /images/projects/pipe-culvert-mesh-tool/populate-pipe-z.png
+      caption: "Populate pipe inflow and outflow levels from mesh polygons"
+- name: DHI MIKE Model Crosscheck
+  repo: https://github.com/Bipul-roy-AI/DHI_MIKE_m11-mu-m21fm-crosscheck
+  description: "ArcMap toolbox that checks pipe and node shapefile values against MIKE 11, MIKE+ and MIKE 21 FM models, with separate CSV reports and M21FM batch processing."
+  screenshots:
+    - src: /images/projects/dhi-mike-crosscheck/m11-check.png
+      caption: "MIKE 11: compare selected pipes with an NWK network"
+    - src: /images/projects/dhi-mike-crosscheck/mu-check.png
+      caption: "MIKE+: check pipe levels and node ground, invert and diameter values"
+    - src: /images/projects/dhi-mike-crosscheck/m21fm-check.png
+      caption: "MIKE 21 FM: compare pipe levels and culvert dimensions"
+    - src: /images/projects/dhi-mike-crosscheck/m21fm-batch-check.png
+      caption: "MIKE 21 FM batch: check selected pipes against multiple models"
