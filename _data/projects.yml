@@ -29,15 +29,9 @@
 - name: Bangladesh Water Balance & Recharge
   repo: https://github.com/Bipul-roy-AI/gee-water-balance-recharge-bangladesh
   description: "Satellite-based annual potential groundwater recharge screening model incorporating rainfall, ET, runoff and seasonal storage change."
-- name: Topographic Soil Moisture Controls
-  repo: https://github.com/Bipul-roy-AI/topographic-soil-moisture-controls
-  description: "Methodological demonstration of terrain-based Random Forest models and spatial cross-validation with a synthetic—not observed—soil moisture proxy."
 - name: Bangladesh Surface-Water Dynamics
   repo: https://github.com/Bipul-roy-AI/Bangladesh-surface-water-analysis
   description: "Monsoon-sensitive remote sensing for monitoring seasonal water extent and water-body transitions in the Bangladesh Delta."
-- name: Dhaka Air Pollution Climate Health Intelligence
-  repo: https://github.com/Bipul-roy-AI/Dhaka-Air-Pollution-Climate-Health-Intelligence
-  description: "Environmental data-science framework integrating air-quality observations, satellite products and climate reanalysis time series."
 - name: Pipe Culvert Mesh Tool
   repo: https://github.com/Bipul-roy-AI/Pipe-Culvert-Mesh-Tool
   description: "ArcMap toolbox that fills pipe and culvert inflow and outflow levels from mesh elevations, using pipe direction and a configurable search distance."
