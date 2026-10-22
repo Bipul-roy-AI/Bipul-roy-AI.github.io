@@ -39,7 +39,7 @@ I am a computational geographer working at the intersection of hydrology, remote
 
 ## About me
 
-I am a GIS Analyst working with hydrodynamic models and spatial infrastructure data, and a Research Assistant at the Space and Environment Research Centre (SERC), Bangladesh. I am pursuing an M.S. in GIS for Environment and Development at Jahangirnagar University.
+I am a GIS Analyst working with hydrodynamic models and spatial infrastructure data, and a Research Assistant at the Space and Environment Research Centre (SERC), Bangladesh. I hold a **Bachelor of Science (BS) in Geography and Environment** from **Shahjalal University of Science & Technology, Sylhet, Bangladesh**, where I studied from **February 2019 to March 2024**.
 
 My interests include river and urban flood processes, satellite-based land and water monitoring, environmental change, spatial epidemiology, and open-source geospatial software.
 

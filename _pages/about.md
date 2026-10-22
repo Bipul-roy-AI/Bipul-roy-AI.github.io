@@ -11,7 +11,7 @@ permalink: /about/
 <img src="{{ site.photo | prepend: '/images/' | relative_url }}" class="pi-photo" alt="Bipul Roy portrait" width="128" height="128">
 <div>
 <h2 class="pi-name">Bipul Roy</h2>
-<p class="text-muted">Computational Geographer · GIS Analyst · Graduate Researcher</p>
+<p class="text-muted">Computational Geographer · GIS Analyst · Research Assistant</p>
 <div class="pi-links">
 <a href="mailto:{{ site.email }}" class="icon-link" title="Email" aria-label="Email">{% include icon.html name="envelope" %}</a>
 <a href="{{ site.links.github }}" class="icon-link" title="GitHub" aria-label="GitHub">{% include icon.html name="github" %}</a>
@@ -20,7 +20,7 @@ permalink: /about/
 
 I am a computational geographer working at the intersection of **hydrology, Earth observation, environmental modelling and geospatial data science**. I apply GIS and statistical methods to environmental problems that involve complex spatial relationships, uncertain measurements and practical decisions.
 
-I work as a **GIS Analyst (remote) at SPEKTER GmbH**, building and checking geospatial inputs for hydraulic modelling, and as a **Research Assistant at the Space and Environment Research Centre (SERC)**, Bangladesh. I am also an **M.S. candidate in GIS for Environment and Development at Jahangirnagar University**.
+I work as a **GIS Analyst (remote) at SPEKTER GmbH**, building and checking geospatial inputs for hydraulic modelling, and as a **Research Assistant at the Space and Environment Research Centre (SERC)**, Bangladesh.
 
 My approach prioritizes physically defensible models, spatial validation, open-source tools, documented assumptions and reproducibility.
 
@@ -34,7 +34,9 @@ My approach prioritizes physically defensible models, spatial validation, open-s
 
 ## Education
 
-**M.S. candidate — GIS for Environment and Development**  
-Jahangirnagar University, Bangladesh
+**Bachelor of Science (BS) in Geography and Environment**  
+**Shahjalal University of Science & Technology**  
+Sylhet, Bangladesh  
+February 2019–March 2024
 
 See [professional experience]({{ '/experience/' | relative_url }}) and [open-source software]({{ '/software/' | relative_url }}).
