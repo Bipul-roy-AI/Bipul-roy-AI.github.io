@@ -283,4 +283,73 @@
     });
   }
 
+  // ----- Image Lightbox (buttons marked with data-lightbox) -----
+
+  var lbTriggers = Array.prototype.slice.call(document.querySelectorAll('[data-lightbox]'));
+  if (lbTriggers.length) {
+    var lb = document.createElement('div');
+    lb.className = 'lb';
+    lb.setAttribute('role', 'dialog');
+    lb.setAttribute('aria-modal', 'true');
+    lb.setAttribute('aria-label', 'Image viewer');
+    lb.innerHTML =
+      '<button type="button" class="lb-btn lb-close" aria-label="Close">&times;</button>' +
+      '<button type="button" class="lb-btn lb-prev" aria-label="Previous image">&#8249;</button>' +
+      '<button type="button" class="lb-btn lb-next" aria-label="Next image">&#8250;</button>' +
+      '<img alt="">' +
+      '<p class="lb-title"><span class="lb-name"></span><span class="lb-count"></span></p>';
+    document.body.appendChild(lb);
+
+    var lbImg = lb.querySelector('img');
+    var lbName = lb.querySelector('.lb-name');
+    var lbCount = lb.querySelector('.lb-count');
+    var lbIndex = 0;
+    var lbOpener = null;
+
+    function lbShow(i) {
+      lbIndex = (i + lbTriggers.length) % lbTriggers.length;
+      var t = lbTriggers[lbIndex];
+      var thumb = t.querySelector('img');
+      lbImg.src = t.getAttribute('data-full');
+      lbImg.alt = thumb ? thumb.alt : '';
+      lbName.textContent = t.getAttribute('data-title') || '';
+      lbCount.textContent = (lbIndex + 1) + ' / ' + lbTriggers.length;
+    }
+    function lbOpen(i, opener) {
+      lbOpener = opener;
+      lbShow(i);
+      lb.classList.add('open');
+      document.documentElement.style.overflow = 'hidden';
+      lb.querySelector('.lb-close').focus();
+    }
+    function lbClose() {
+      lb.classList.remove('open');
+      lbImg.removeAttribute('src');
+      document.documentElement.style.overflow = '';
+      if (lbOpener) lbOpener.focus();
+    }
+
+    lbTriggers.forEach(function (t, i) {
+      t.addEventListener('click', function () { lbOpen(i, t); });
+    });
+    lb.addEventListener('click', function (e) {
+      if (e.target.closest('.lb-close') || e.target === lb) lbClose();
+      else if (e.target.closest('.lb-prev')) lbShow(lbIndex - 1);
+      else if (e.target.closest('.lb-next')) lbShow(lbIndex + 1);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (!lb.classList.contains('open')) return;
+      if (e.key === 'Escape') lbClose();
+      else if (e.key === 'ArrowLeft') lbShow(lbIndex - 1);
+      else if (e.key === 'ArrowRight') lbShow(lbIndex + 1);
+      else if (e.key === 'Tab') {
+        // Keep keyboard focus inside the viewer while it is open
+        var f = lb.querySelectorAll('button');
+        var first = f[0], last = f[f.length - 1];
+        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+      }
+    });
+  }
+
 })();

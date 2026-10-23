@@ -274,6 +274,169 @@ a.software-item:hover, a.software-item:focus-visible {
   .experience-logo { max-height: 115px; }
 }
 
+// Experience page — titled media gallery under an entry (screenshots, collage, video).
+.experience-gallery {
+  grid-column: 1 / -1;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+}
+.experience-gallery-heading {
+  margin: 0 0 1rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.exp-collage {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 1.1rem 1rem;
+}
+.exp-tile {
+  grid-column: span 12;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  margin: 0;
+
+  figcaption {
+    margin-top: 0.55rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 1.35;
+    color: var(--text-primary);
+  }
+}
+@media (min-width: 701px) {
+  .exp-tile--5  { grid-column: span 5; }
+  .exp-tile--6  { grid-column: span 6; }
+  .exp-tile--7  { grid-column: span 7; }
+  .exp-tile--12 { grid-column: span 12; }
+}
+@media (max-width: 900px) and (min-width: 701px) {
+  // Narrow tablets: two even columns, collage and video stay full width.
+  .exp-tile--5, .exp-tile--7 { grid-column: span 6; }
+  .exp-tile:has(.exp-pair), .exp-tile:nth-child(6) { grid-column: span 12; }
+}
+
+// Screenshots are always on white so they read the same in light and dark mode.
+.exp-frame {
+  appearance: none;
+  position: relative;
+  display: block;
+  flex: 1;
+  width: 100%;
+  min-height: clamp(180px, 23vw, 270px);
+  padding: 0;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  cursor: zoom-in;
+  transition: box-shadow var(--transition-base), border-color var(--transition-base);
+
+  img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left top;
+    transition: transform var(--transition-slow);
+  }
+  &:hover, &:focus-visible {
+    border-color: var(--accent);
+    box-shadow: var(--shadow-md);
+    img { transform: scale(1.025); }
+  }
+  &:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+}
+.exp-frame--contain img {
+  object-fit: contain;
+  object-position: center;
+}
+.exp-pair {
+  display: grid;
+  grid-template-columns: minmax(0, 1.8fr) minmax(0, 1fr);
+  gap: 0.6rem;
+  flex: 1;
+}
+.exp-video {
+  overflow: hidden;
+  background: #0f1417;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+
+  video { display: block; width: 100%; height: auto; max-height: 480px; }
+}
+@media (max-width: 700px) {
+  .exp-frame { min-height: 0; aspect-ratio: 1.8 / 1; }
+  .exp-pair { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); }
+  .exp-pair .exp-frame { aspect-ratio: auto; min-height: 150px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .exp-frame, .exp-frame img { transition: none; }
+  .exp-frame:hover img, .exp-frame:focus-visible img { transform: none; }
+}
+
+// Lightbox (opened from [data-lightbox] buttons, built by site.js)
+.lb {
+  position: fixed;
+  inset: 0;
+  z-index: 2100;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9rem;
+  padding: 3.5rem 1rem 1.5rem;
+  background: rgba(10, 14, 16, 0.93);
+
+  &.open { display: flex; }
+  img {
+    max-width: min(96vw, 1500px);
+    max-height: calc(100vh - 10rem);
+    background: #fff;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+  }
+  .lb-title {
+    max-width: 90vw;
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    color: #f1efe9;
+  }
+  .lb-count { font-size: 0.8rem; font-weight: 500; opacity: 0.7; margin-left: 0.5rem; }
+}
+.lb-btn {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.12);
+  border: 0;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: background var(--transition-fast);
+
+  &:hover, &:focus-visible { background: rgba(255, 255, 255, 0.28); }
+  &:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+}
+.lb-close { top: 0.85rem; right: 0.85rem; }
+.lb-prev  { left: 0.85rem; top: 50%; transform: translateY(-50%); }
+.lb-next  { right: 0.85rem; top: 50%; transform: translateY(-50%); }
+@media (max-width: 700px) {
+  .lb-prev, .lb-next { top: auto; bottom: 0.9rem; transform: none; }
+}
+
 
 // Uploaded artwork, in three 64px sprite cells: ArcGIS Pro, GeoAI, general AI.
 // Fallback monograms are deliberately hidden only for these three image-backed icons.
