@@ -19,6 +19,15 @@ I study environmental systems through GIS, hydrodynamic modelling, spatial analy
 </div>
 </div>
 <div class="research-card">
+<a class="research-card-image-link" href="{{ '/research/cht-soil-moisture/' | relative_url }}" aria-label="Open Chittagong Hill Tracts soil-moisture and forest ecohydrology study"><img src="https://raw.githubusercontent.com/Bipul-roy-AI/cht-soil-moisture-gapfilling/main/outputs/figures/08_temporal_test_smap_scatter.png" class="research-thumb research-thumb--map" alt="Held-out 2022 satellite SMAP values compared with XGBoost reconstruction predictions" width="800" height="400" loading="lazy"></a>
+<div class="research-body">
+<h2 class="research-title"><a href="{{ '/research/cht-soil-moisture/' | relative_url }}">CHT | Soil-moisture gap filling &amp; forest ecohydrology</a></h2>
+<p class="research-desc">Quality-aware SMAP reconstruction (2019–2022) and forest rainfall, vegetation and modeled ET context (2017–2022) for Bandarban, Khagrachhari and Rangamati.</p>
+<p class="research-desc"><strong>Selected result:</strong> On held-out, QA-accepted 2022 SMAP observations, XGBoost achieved RMSE 0.0555 m³/m³, about 20.8% lower than a calendar-month baseline. <em>Satellite-product evaluation only; no ground validation.</em></p>
+<p class="research-links"><a href="{{ '/research/cht-soil-moisture/' | relative_url }}">View maps, results &amp; limitations →</a> <a href="https://github.com/Bipul-roy-AI/cht-soil-moisture-gapfilling">Research data &amp; code ↗</a></p>
+</div>
+</div>
+<div class="research-card">
 <img src="{{ '/images/research/health.svg' | relative_url }}" class="research-thumb" alt="Illustration of urban ward risk map" width="400" height="200">
 <div class="research-body"><h2 class="research-title">Dengue geospatial risk</h2><p class="research-desc">Chattogram-focused spatial epidemiology with environmental factors, ward-level data and multi-criteria risk assessment.</p></div>
 </div>
