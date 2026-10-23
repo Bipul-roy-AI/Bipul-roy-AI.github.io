@@ -10,13 +10,6 @@ I study environmental systems through GIS, hydrodynamic modelling, spatial analy
 
 <div class="research-grid" markdown="0">
 <div class="research-card">
-<img src="{{ '/images/research/flood.svg' | relative_url }}" class="research-thumb" alt="Illustration of a river and floodplain mesh" width="400" height="200">
-<div class="research-body">
-<h2 class="research-title">Flood hydrodynamics &amp; hydraulic networks</h2>
-<p class="research-desc">Coupled 1D/2D hydraulic modelling, mesh–pipe integration, culvert connectivity and model QA for flood-risk assessment.</p>
-</div>
-</div>
-<div class="research-card">
 <a class="research-card-image-link" href="{{ '/research/hakaluki-haor/' | relative_url }}" aria-label="Open Hakaluki Haor research results"><img src="https://raw.githubusercontent.com/Bipul-roy-AI/Hakaluki-Haor-Wetland-Methane-Research/main/docs/assets/figures/analysis13/13B_2022_may_expansion_spatial_change.png" class="research-thumb research-thumb--map" alt="Actual Sentinel-1 paired VV/VH change map for Hakaluki Haor in May 2022" width="800" height="400" loading="lazy"></a>
 <div class="research-body">
 <h2 class="research-title"><a href="{{ '/research/hakaluki-haor/' | relative_url }}">Hakaluki Haor | Wetland dynamics &amp; methane observability</a></h2>
