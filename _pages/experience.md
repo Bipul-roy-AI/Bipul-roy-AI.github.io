@@ -72,7 +72,7 @@ permalink: /experience/
 
       <figure class="exp-tile exp-tile--12">
         <div class="exp-video">
-          <video controls preload="none" playsinline poster="{{ '/images/experience/spekter/flood-b00-100yr-6h-poster.webp' | relative_url }}" aria-label="Flood B00 simulation: 100-year maximum flood, 6-hour event, animated water depth map">
+          <video controls muted loop playsinline preload="metadata" data-autoplay poster="{{ '/images/experience/spekter/flood-b00-100yr-6h-poster.webp' | relative_url }}" aria-label="Flood B00 simulation: 100-year maximum flood, 6-hour event, animated water depth map">
             <source src="{{ '/images/experience/spekter/flood-b00-100yr-6h.mp4' | relative_url }}" type="video/mp4">
           </video>
         </div>

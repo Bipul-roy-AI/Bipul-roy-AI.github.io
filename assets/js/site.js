@@ -283,6 +283,39 @@
     });
   }
 
+  // ----- Muted autoplay while visible (videos marked with data-autoplay) -----
+
+  var autoVideos = document.querySelectorAll('video[data-autoplay]');
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (autoVideos.length && 'IntersectionObserver' in window && !reduceMotion) {
+    var videoObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        var v = entry.target;
+        v._visible = entry.isIntersecting;
+        if (entry.isIntersecting) {
+          if (!v._userPaused) {
+            var p = v.play();
+            if (p && p.catch) p.catch(function () {});
+          }
+        } else if (!v.paused) {
+          v._autoPaused = true;
+          v.pause();
+        }
+      });
+    }, { threshold: 0.4 });
+
+    autoVideos.forEach(function (v) {
+      v.muted = true;
+      // A pause while the video is on screen was the viewer's choice: respect it.
+      v.addEventListener('pause', function () {
+        if (v._autoPaused) { v._autoPaused = false; return; }
+        if (v._visible) v._userPaused = true;
+      });
+      v.addEventListener('play', function () { v._userPaused = false; });
+      videoObserver.observe(v);
+    });
+  }
+
   // ----- Image Lightbox (buttons marked with data-lightbox) -----
 
   var lbTriggers = Array.prototype.slice.call(document.querySelectorAll('[data-lightbox]'));
