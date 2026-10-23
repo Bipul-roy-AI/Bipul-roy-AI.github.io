@@ -1,5 +1,11 @@
 # Open-source projects from the author's public GitHub repositories.
 # Optional per project: screenshots (list of {src, caption}) shown as demo pictures.
+- name: Chittagong Hill Tracts Soil Moisture Gap-Filling
+  repo: https://github.com/Bipul-roy-AI/cht-soil-moisture-gapfilling
+  description: "Exploratory SMAP and Sentinel-1 soil-moisture observability study, with a reproducible 300-day availability audit, academic-methodology review and leakage-controlled temporal evaluation protocol. Original ML scores require revalidation."
+  screenshots:
+    - src: https://raw.githubusercontent.com/Bipul-roy-AI/cht-soil-moisture-gapfilling/main/results/availability_verified.svg
+      caption: "Verified 2021 regional-mean SMAP observation availability (148 recorded, 152 missing days); gap causes not established"
 - name: GEE LULC Research Engine
   repo: https://github.com/Bipul-roy-AI/gee-lulc-research-engine
   description: "Automated Google Earth Engine land-cover classification with Sentinel-2 and Landsat imagery, supervised classifiers, cross-validation and uncertainty outputs."
