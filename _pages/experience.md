@@ -70,6 +70,27 @@ permalink: /experience/
         <figcaption>Complex culvert structure</figcaption>
       </figure>
 
+      <figure class="exp-tile exp-tile--4">
+        <button type="button" class="exp-frame exp-frame--center" data-lightbox data-full="{{ '/images/experience/spekter/m21fm-mesh-cleaning.webp' | relative_url }}" data-title="2D surface model (MIKE 21 FM) mesh cleaning" aria-label="Enlarge: 2D surface model (MIKE 21 FM) mesh cleaning">
+          <img src="{{ '/images/experience/spekter/m21fm-mesh-cleaning-thumb.webp' | relative_url }}" width="900" height="559" alt="MIKE Zero view of a colour-banded bathymetry mesh of a valley and town, with cross-section labels along the stream" loading="lazy" decoding="async">
+        </button>
+        <figcaption>2D surface model (MIKE 21 FM) mesh cleaning</figcaption>
+      </figure>
+
+      <figure class="exp-tile exp-tile--4">
+        <button type="button" class="exp-frame exp-frame--center" data-lightbox data-full="{{ '/images/experience/spekter/risk-analysis-bad-brueckenau.webp' | relative_url }}" data-title="Risk analysis in Bad Brückenau, Germany" aria-label="Enlarge: Risk analysis in Bad Brückenau, Germany">
+          <img src="{{ '/images/experience/spekter/risk-analysis-bad-brueckenau-thumb.webp' | relative_url }}" width="900" height="460" alt="ArcMap flood-depth results along the valley and town of Bad Brückenau on a grey basemap" loading="lazy" decoding="async">
+        </button>
+        <figcaption>Risk analysis in Bad Brückenau, Germany</figcaption>
+      </figure>
+
+      <figure class="exp-tile exp-tile--4">
+        <button type="button" class="exp-frame exp-frame--center" data-lightbox data-full="{{ '/images/experience/spekter/pipe-culvert-digitization.webp' | relative_url }}" data-title="Pipe and culvert digitization from survey" aria-label="Enlarge: Pipe and culvert digitization from survey">
+          <img src="{{ '/images/experience/spekter/pipe-culvert-digitization-thumb.webp' | relative_url }}" width="900" height="482" alt="ArcMap view of digitised pipe and culvert lines with survey levels over a colour-shaded terrain model" loading="lazy" decoding="async">
+        </button>
+        <figcaption>Pipe and culvert digitization from survey</figcaption>
+      </figure>
+
       <figure class="exp-tile exp-tile--12">
         <div class="exp-video">
           <video controls muted loop playsinline preload="metadata" data-autoplay poster="{{ '/images/experience/spekter/flood-b00-100yr-6h-poster.webp' | relative_url }}" aria-label="Flood B00 simulation: 100-year maximum flood, 6-hour event, animated water depth map">

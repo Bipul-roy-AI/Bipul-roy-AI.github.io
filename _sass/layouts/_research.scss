@@ -309,6 +309,7 @@ a.software-item:hover, a.software-item:focus-visible {
   }
 }
 @media (min-width: 701px) {
+  .exp-tile--4  { grid-column: span 4; }
   .exp-tile--5  { grid-column: span 5; }
   .exp-tile--6  { grid-column: span 6; }
   .exp-tile--7  { grid-column: span 7; }
@@ -317,7 +318,8 @@ a.software-item:hover, a.software-item:focus-visible {
 @media (max-width: 900px) and (min-width: 701px) {
   // Narrow tablets: two even columns, collage and video stay full width.
   .exp-tile--5, .exp-tile--7 { grid-column: span 6; }
-  .exp-tile:has(.exp-pair), .exp-tile:nth-child(6) { grid-column: span 12; }
+  .exp-tile--4 { grid-column: span 6; }
+  .exp-tile:has(.exp-pair), .exp-tile:nth-child(6), .exp-tile:nth-child(9) { grid-column: span 12; }
 }
 
 // Screenshots are always on white so they read the same in light and dark mode.
@@ -352,6 +354,8 @@ a.software-item:hover, a.software-item:focus-visible {
   }
   &:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 }
+.exp-tile--4 .exp-frame { min-height: clamp(170px, 17vw, 215px); }
+.exp-frame--center img { object-position: center; }
 .exp-frame--contain img {
   object-fit: contain;
   object-position: center;
