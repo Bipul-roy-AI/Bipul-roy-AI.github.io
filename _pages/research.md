@@ -19,6 +19,15 @@ I study environmental systems through GIS, hydrodynamic modelling, spatial analy
 </div>
 </div>
 <div class="research-card">
+<a class="research-card-image-link" href="{{ '/research/dhaka-air-pollution/' | relative_url }}" aria-label="Open Dhaka air pollution and climate research results"><img src="https://raw.githubusercontent.com/Bipul-roy-AI/Dhaka-Air-Pollution-Climate-Health-Intelligence/main/research_docs/figures/pm25_source_discontinuity.svg" class="research-thumb research-thumb--map" alt="Dhaka archived PM2.5 monthly series highlighting an August 2022 source discontinuity under investigation" width="800" height="400" loading="lazy"></a>
+<div class="research-body">
+<h2 class="research-title"><a href="{{ '/research/dhaka-air-pollution/' | relative_url }}">Dhaka | Air-pollution dynamics &amp; climate context</a></h2>
+<p class="research-desc">Exploratory environmental data science (2000–2025): archived monthly pollution, MODIS/Sentinel indicators, ERA5-Land climate features and preliminary machine-learning evaluation.</p>
+<p class="research-desc"><strong>Selected result and status:</strong> A sharp PM2.5 archive discontinuity around August 2022 suggests a possible input-source change; historical comparability and model reproduction are <em>under verification</em>. No validated health impacts are claimed.</p>
+<p class="research-links"><a href="{{ '/research/dhaka-air-pollution/' | relative_url }}">View figures &amp; research limitations →</a> <a href="https://github.com/Bipul-roy-AI/Dhaka-Air-Pollution-Climate-Health-Intelligence">Research data &amp; results ↗</a></p>
+</div>
+</div>
+<div class="research-card">
 <a class="research-card-image-link" href="{{ '/research/cht-soil-moisture/' | relative_url }}" aria-label="Open Chittagong Hill Tracts soil-moisture and forest ecohydrology study"><img src="https://raw.githubusercontent.com/Bipul-roy-AI/cht-soil-moisture-gapfilling/main/outputs/figures/08_temporal_test_smap_scatter.png" class="research-thumb research-thumb--map" alt="Held-out 2022 satellite SMAP values compared with XGBoost reconstruction predictions" width="800" height="400" loading="lazy"></a>
 <div class="research-body">
 <h2 class="research-title"><a href="{{ '/research/cht-soil-moisture/' | relative_url }}">CHT | Soil-moisture gap filling &amp; forest ecohydrology</a></h2>
