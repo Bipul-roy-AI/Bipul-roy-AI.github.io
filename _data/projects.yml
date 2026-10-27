@@ -50,3 +50,11 @@
       caption: "MIKE 21 FM: compare pipe levels and culvert dimensions"
     - src: /images/projects/dhi-mike-crosscheck/m21fm-batch-check.png
       caption: "MIKE 21 FM batch: check selected pipes against multiple models"
+- name: MIKE Urban Node Attribute Updater
+  repo: https://github.com/Bipul-roy-AI/Mike-urban-network-node-updater
+  description: "ArcMap 10.8 Python toolbox that populates MIKE Urban drainage node IDs, invert levels, diameters and ground elevations from pipe connectivity, optional CAD survey points and mesh bathymetry, with timestamped backups."
+  screenshots:
+    - src: https://raw.githubusercontent.com/Bipul-roy-AI/Mike-urban-network-node-updater/main/assets/arcmap_toolbox_dialog.png
+      caption: "ArcMap toolbox interface for configuring MU node attribute updates"
+    - src: https://raw.githubusercontent.com/Bipul-roy-AI/Mike-urban-network-node-updater/main/assets/mu_nodes_attribute_table.png
+      caption: "Example MU nodes with populated drainage-network attributes"
