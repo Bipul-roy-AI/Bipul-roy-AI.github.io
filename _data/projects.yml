@@ -1,5 +1,17 @@
 # Open-source projects from the author's public GitHub repositories.
 # Optional per project: screenshots (list of {src, caption}) shown as demo pictures.
+- name: ShasthoPath — Bangladesh Healthcare Accessibility
+  repo: https://github.com/Bipul-roy-AI/Health_care_accessibility
+  website: https://bipul-roy-ai.github.io/Health_care_accessibility/
+  docs: https://github.com/Bipul-roy-AI/Health_care_accessibility#readme
+  description: "An English–Bangla healthcare directory and map with 39,442 DGHS institution records, division-level distribution, boundary-checked facility points, road routing, and emergency helplines. Extracted data and incremental profile updates are available in the open repository."
+  screenshots:
+    - src: /images/projects/shasthopath/directory.png
+      caption: "Institution search, official facility details, a free light basemap, and driving routes"
+    - src: /images/projects/shasthopath/overview.png
+      caption: "National institution distribution with Bangladesh boundary checks, division filters, and a point legend"
+    - src: /images/projects/shasthopath/helplines.png
+      caption: "Bangladesh emergency and national helpline directory with tap-to-call links and service sources"
 - name: GEE LULC Research Engine
   repo: https://github.com/Bipul-roy-AI/gee-lulc-research-engine
   description: "Automated Google Earth Engine land-cover classification with Sentinel-2 and Landsat imagery, supervised classifiers, cross-validation and uncertainty outputs."
