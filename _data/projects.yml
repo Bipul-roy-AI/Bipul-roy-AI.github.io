@@ -1,3 +1,18 @@
+- name: Universal Satellite
+  repo: "https://github.com/Bipul-roy-AI/Universal-Satellite"
+  docs: "https://github.com/Bipul-roy-AI/Universal-Satellite#readme"
+  description: "Open-source Earth-observation discovery and analysis toolkit with Python and typed Node/TypeScript interfaces, QGIS tools and an ArcGIS Pro toolbox. Supports 30 searchable source choices, resumable asset downloads, 280 referenced spectral formulas, environmental point profiles and polygon clipping. Provider-specific credentials and coverage restrictions apply."
+  screenshots:
+    - src: /images/projects/universal-satellite/qgis-scene-search.png
+      caption: "QGIS scene search: Select a dataset, area, date range and cloud-cover limit, with optional asset downloading."
+    - src: /images/projects/universal-satellite/qgis-download-help.png
+      caption: "QGIS asset download: Choose asset keys, an output folder, resumption and concurrent downloads; the Help panel explains the options."
+    - src: /images/projects/universal-satellite/qgis-normalized-index.png
+      caption: "QGIS normalized-difference indices: The two-band tool offers NDVI, NDWI and NBR. The separate full-catalog tool provides additional spectral formulas."
+    - src: /images/projects/universal-satellite/arcgis-dataset-selection.png
+      caption: "ArcGIS Pro dataset selection: Browse optical, radar, elevation, land-cover and environmental sources."
+    - src: /images/projects/universal-satellite/arcgis-search-download.png
+      caption: "ArcGIS Pro search and download: Configure dates and cloud cover, save a manifest and monitor asset download progress."
 # Open-source projects from the author's public GitHub repositories.
 # Optional per project: screenshots (list of {src, caption}) shown as demo pictures.
 - name: ShasthoPath — Bangladesh Healthcare Accessibility
