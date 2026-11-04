@@ -27,6 +27,15 @@
       caption: "National institution distribution with Bangladesh boundary checks, division filters, and a point legend"
     - src: /images/projects/shasthopath/helplines.png
       caption: "Bangladesh emergency and national helpline directory with tap-to-call links and service sources"
+- name: Earth Engine Research Workbench
+  repo: https://github.com/Bipul-roy-AI/gee_interactive_downloader
+  docs: https://github.com/Bipul-roy-AI/gee_interactive_downloader#readme
+  description: "A local Python and Streamlit workbench for researchers and GIS users, expanded from the GEE Interactive Downloader. Includes nine dataset presets spanning optical imagery, radar, rainfall, temperature, terrain and historical surface water; seven spectral indices; scene selection, composites, regional statistics, time series and baseline comparisons. Exports GeoTIFFs, CSV time series and reproducible JSON analysis manifests, with source scene IDs and valid-observation counts. Live data and exports require an authenticated Earth Engine project."
+  screenshots:
+    - src: https://raw.githubusercontent.com/Bipul-roy-AI/gee_interactive_downloader/8520ba99d273ffa277702da8495287b0ef90d754/docs/screenshots/study-design.png
+      caption: "Study design in the running app: dataset, dates, spectral index, study area and output grid. Setup-mode screenshot; no live Earth Engine data shown."
+    - src: https://raw.githubusercontent.com/Bipul-roy-AI/gee_interactive_downloader/8520ba99d273ffa277702da8495287b0ef90d754/docs/screenshots/methods-catalog.png
+      caption: "Methods and data catalog: dataset sources, units, output scales and scientific limitations. Authenticated imagery retrieval and export completion still require live validation."
 - name: GEE LULC Research Engine
   repo: https://github.com/Bipul-roy-AI/gee-lulc-research-engine
   description: "Automated Google Earth Engine land-cover classification with Sentinel-2 and Landsat imagery, supervised classifiers, cross-validation and uncertainty outputs."
