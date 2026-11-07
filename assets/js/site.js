@@ -169,7 +169,8 @@
         }
       });
     }, {
-      threshold: 0.1,
+      // A long research page may never fit 10% of its height in a phone screen.
+      threshold: 0,
       rootMargin: '0px 0px -40px 0px'
     });
 

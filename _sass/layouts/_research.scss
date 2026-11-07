@@ -136,6 +136,7 @@
     line-height: 1.7;
     color: var(--text-secondary);
     strong { color: var(--text-primary); }
+    a { display: inline; }
   }
 }
 .research-ongoing {
@@ -143,6 +144,17 @@
   border-top: 1px solid var(--border-color);
   padding-top: 1.6rem;
   p { color: var(--text-secondary); line-height: 1.75; }
+}
+
+// Keep the portrait location map readable without forcing a landscape frame.
+.research-evidence--location {
+  max-width: 34rem;
+  margin: 1.5rem auto;
+
+  img {
+    aspect-ratio: auto;
+    max-height: 42rem;
+  }
 }
 
 @media (max-width: 800px) {

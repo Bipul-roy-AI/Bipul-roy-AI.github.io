@@ -1,0 +1,71 @@
+{
+  "source_repository": "Bipul-roy-AI/Dhaka-Air-Quality-Climate-Research",
+  "source_commit": "85d25f2810e571ca332d958d0d6e0b674d1f8ca5",
+  "transformation": "WebP quality90, maximum1600\u00d72000pixels; full-resolution figures remain linked",
+  "scientific_values_modified": false,
+  "images": [
+    {
+      "file": "study-area.webp",
+      "source_url": "https://raw.githubusercontent.com/Bipul-roy-AI/Dhaka-Air-Quality-Climate-Research/85d25f2810e571ca332d958d0d6e0b674d1f8ca5/figures/study_area.png",
+      "source_sha256": "f9a53de572e30d385e0b5a142cdf39d8279af49887d688d37fc29a8d9fc43c4c",
+      "web_sha256": "13ce10e6f34d398dacc8d6e8918f267e931259200ebdf66edd1f14d92b0021a4",
+      "width": 1600,
+      "height": 2000,
+      "bytes": 113872
+    },
+    {
+      "file": "seasonality.webp",
+      "source_url": "https://raw.githubusercontent.com/Bipul-roy-AI/Dhaka-Air-Quality-Climate-Research/85d25f2810e571ca332d958d0d6e0b674d1f8ca5/figures/01_seasonality.png",
+      "source_sha256": "6a0fd2adec305b10607b43fc4b25fabee2b6c3b4341040fd5fc49028e0d3d6f3",
+      "web_sha256": "07fc509f65598d987a5f59678070129805c3fcb038d7ed099bf186b7c4be9ab6",
+      "width": 1600,
+      "height": 640,
+      "bytes": 33648
+    },
+    {
+      "file": "trend.webp",
+      "source_url": "https://raw.githubusercontent.com/Bipul-roy-AI/Dhaka-Air-Quality-Climate-Research/85d25f2810e571ca332d958d0d6e0b674d1f8ca5/figures/02_trend.png",
+      "source_sha256": "df6449ff44facf2e857a2ec83b1b7a9c1d5d65f4e0051e99f8f762270f78ca68",
+      "web_sha256": "a6a948618ebde8d503e4597791b66b870961b6c9de9f5173fd6115a50da4049a",
+      "width": 1600,
+      "height": 640,
+      "bytes": 55404
+    },
+    {
+      "file": "weather-associations.webp",
+      "source_url": "https://raw.githubusercontent.com/Bipul-roy-AI/Dhaka-Air-Quality-Climate-Research/85d25f2810e571ca332d958d0d6e0b674d1f8ca5/figures/03_weather_associations.png",
+      "source_sha256": "08ceee46a574492a9fd4ecd68874d4369aecec44c15b88bfe1fe3c1980afed8b",
+      "web_sha256": "adf1715707a7276a3e8dde358c835f1fc928659a7b6a816fda03e30a75976563",
+      "width": 1440,
+      "height": 810,
+      "bytes": 44906
+    },
+    {
+      "file": "prediction.webp",
+      "source_url": "https://raw.githubusercontent.com/Bipul-roy-AI/Dhaka-Air-Quality-Climate-Research/85d25f2810e571ca332d958d0d6e0b674d1f8ca5/figures/04_prediction.png",
+      "source_sha256": "c59eea8802a3392c1bc6f20b9bb13d2ea18cb03609328dc0e453be9222f4579a",
+      "web_sha256": "53a46160543765d943ec492628a41e483ccefbe3623bf0b1a1450992c6d177f1",
+      "width": 1600,
+      "height": 684,
+      "bytes": 39364
+    },
+    {
+      "file": "regional-comparison.webp",
+      "source_url": "https://raw.githubusercontent.com/Bipul-roy-AI/Dhaka-Air-Quality-Climate-Research/85d25f2810e571ca332d958d0d6e0b674d1f8ca5/figures/reference/independent_reference_comparison.png",
+      "source_sha256": "e318fb4113b255cf2d0c6cb1cd4692301213a6031e2b26a2ebfe779fb2650b21",
+      "web_sha256": "37aacabc585e37179d79b29770b97444e4a9148dc1a8ebabb8d066dd29f597e6",
+      "width": 1600,
+      "height": 1072,
+      "bytes": 124584
+    },
+    {
+      "file": "regional-climatology.webp",
+      "source_url": "https://raw.githubusercontent.com/Bipul-roy-AI/Dhaka-Air-Quality-Climate-Research/85d25f2810e571ca332d958d0d6e0b674d1f8ca5/figures/reference/pollutant_climatology.png",
+      "source_sha256": "eab303a3cf9bd8a22fc619ed6f6bc4b297c10271173eef8f2ccf1afd55c298f5",
+      "web_sha256": "db475cf67e9d0eecadd442725c1432473758da32dc124bcc1443fc4dc962a68a",
+      "width": 1600,
+      "height": 589,
+      "bytes": 58302
+    }
+  ]
+}

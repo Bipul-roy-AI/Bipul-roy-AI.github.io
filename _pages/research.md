@@ -19,12 +19,12 @@ I study environmental systems through GIS, hydrodynamic modelling, spatial analy
 </div>
 </div>
 <div class="research-card">
-<a class="research-card-image-link" href="{{ '/research/dhaka-air-pollution/' | relative_url }}" aria-label="Open Dhaka air pollution and climate research results"><img src="https://raw.githubusercontent.com/Bipul-roy-AI/Dhaka-Air-Pollution-Climate-Health-Intelligence/main/research_docs/figures/pm25_source_discontinuity.svg" class="research-thumb research-thumb--map" alt="Dhaka archived PM2.5 monthly series highlighting an August 2022 source discontinuity under investigation" width="800" height="400" loading="lazy"></a>
+<a class="research-card-image-link" href="{{ '/research/dhaka-air-pollution/' | relative_url }}" aria-label="Open Dhaka seasonal PM2.5, weather and reanalysis results"><img src="{{ '/assets/images/research/dhaka/seasonality.webp' | relative_url }}" class="research-thumb research-thumb--map" alt="Observed Dhaka PM2.5 calendar-month and seasonal concentrations during 2016–2021" width="800" height="400" loading="lazy"></a>
 <div class="research-body">
-<h2 class="research-title"><a href="{{ '/research/dhaka-air-pollution/' | relative_url }}">Dhaka | Air-pollution dynamics &amp; climate context</a></h2>
-<p class="research-desc">Exploratory environmental data science (2000–2025): archived monthly pollution, MODIS/Sentinel indicators, ERA5-Land climate features and preliminary machine-learning evaluation.</p>
-<p class="research-desc"><strong>Selected result and status:</strong> A sharp PM2.5 archive discontinuity around August 2022 suggests a possible input-source change; historical comparability and model reproduction are <em>under verification</em>. No validated health impacts are claimed.</p>
-<p class="research-links"><a href="{{ '/research/dhaka-air-pollution/' | relative_url }}">View figures &amp; research limitations →</a> <a href="https://github.com/Bipul-roy-AI/Dhaka-Air-Pollution-Climate-Health-Intelligence">Research data &amp; results ↗</a></p>
+<h2 class="research-title"><a href="{{ '/research/dhaka-air-pollution/' | relative_url }}">Dhaka | Seasonal PM₂.₅, weather &amp; reanalysis</a></h2>
+<p class="research-desc">Observed embassy PM₂.₅ (2016–2021), documented NASA meteorology and credited HyAQMet reanalysis reproduction (2017–2022), with baseline-controlled retrospective prediction.</p>
+<p class="research-desc"><strong>Selected results:</strong> Winter mean 172.02 versus monsoon 33.53 µg/m³; uncertain short-period trend. Regional CAMS correlates with the point reference (r = 0.897) while retaining +16.15 µg/m³ bias. Added conservative-lag weather skill is not established in the later evaluation period.</p>
+<p class="research-links"><a href="{{ '/research/dhaka-air-pollution/' | relative_url }}">View findings, figures &amp; methods →</a> <a href="https://github.com/Bipul-roy-AI/Dhaka-Air-Quality-Climate-Research">Research data &amp; reproducible code ↗</a></p>
 </div>
 </div>
 <div class="research-card">
