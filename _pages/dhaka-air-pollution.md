@@ -1,12 +1,12 @@
 ---
-title: "Dhaka | Seasonal PM₂.₅, Weather and Reanalysis"
+title: "Seasonal Air Pollution, Weather and Atmospheric Conditions in Dhaka, Bangladesh"
 layout: page
 permalink: /research/dhaka-air-pollution/
 ---
 
 <p><a href="{{ '/research/' | relative_url }}">← Back to all research projects</a></p>
 
-# Seasonal PM₂.₅, meteorology and reanalysis agreement in Dhaka
+# Seasonal Air Pollution, Weather and Atmospheric Conditions in Dhaka, Bangladesh
 
 <section class="research-feature" id="dhaka-results" markdown="0">
 <p class="research-feature-intro">How does observed particulate pollution vary through the year in Dhaka? How much predictive information does weather add beyond pollution persistence and the calendar? This study combines an <strong>observed embassy PM₂.₅ record for 2016–2021</strong>, documented NASA meteorology and a credited reproduction of the <strong>2017–2022 HyAQMet regional reanalysis release</strong>. It separates observed patterns, conditional prediction and regional-product agreement, with uncertainty reported beside the findings.</p>

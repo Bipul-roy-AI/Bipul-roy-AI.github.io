@@ -19,9 +19,9 @@ I study environmental systems through GIS, hydrodynamic modelling, spatial analy
 </div>
 </div>
 <div class="research-card">
-<a class="research-card-image-link" href="{{ '/research/dhaka-air-pollution/' | relative_url }}" aria-label="Open Dhaka seasonal PM2.5, weather and reanalysis results"><img src="{{ '/assets/images/research/dhaka/seasonality.webp' | relative_url }}" class="research-thumb research-thumb--map" alt="Observed Dhaka PM2.5 calendar-month and seasonal concentrations during 2016–2021" width="800" height="400" loading="lazy"></a>
+<a class="research-card-image-link" href="{{ '/research/dhaka-air-pollution/' | relative_url }}" aria-label="Open Seasonal Air Pollution, Weather and Atmospheric Conditions in Dhaka, Bangladesh"><img src="{{ '/assets/images/research/dhaka/seasonality.webp' | relative_url }}" class="research-thumb research-thumb--map" alt="Observed Dhaka PM2.5 calendar-month and seasonal concentrations during 2016–2021" width="800" height="400" loading="lazy"></a>
 <div class="research-body">
-<h2 class="research-title"><a href="{{ '/research/dhaka-air-pollution/' | relative_url }}">Dhaka | Seasonal PM₂.₅, weather &amp; reanalysis</a></h2>
+<h2 class="research-title"><a href="{{ '/research/dhaka-air-pollution/' | relative_url }}">Seasonal Air Pollution, Weather and Atmospheric Conditions in Dhaka, Bangladesh</a></h2>
 <p class="research-desc">Observed embassy PM₂.₅ (2016–2021), documented NASA meteorology and credited HyAQMet reanalysis reproduction (2017–2022), with baseline-controlled retrospective prediction.</p>
 <p class="research-desc"><strong>Selected results:</strong> Winter mean 172.02 versus monsoon 33.53 µg/m³; uncertain short-period trend. Regional CAMS correlates with the point reference (r = 0.897) while retaining +16.15 µg/m³ bias. Added conservative-lag weather skill is not established in the later evaluation period.</p>
 <p class="research-links"><a href="{{ '/research/dhaka-air-pollution/' | relative_url }}">View findings, figures &amp; methods →</a> <a href="https://github.com/Bipul-roy-AI/Dhaka-Air-Quality-Climate-Research">Research data &amp; reproducible code ↗</a></p>
