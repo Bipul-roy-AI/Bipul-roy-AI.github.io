@@ -70,10 +70,15 @@
   description: "Monsoon-sensitive remote sensing for monitoring seasonal water extent and water-body transitions in the Bangladesh Delta."
 - name: Pipe Culvert Mesh Tool
   repo: https://github.com/Bipul-roy-AI/Pipe-Culvert-Mesh-Tool
-  description: "ArcMap toolbox that fills pipe and culvert inflow and outflow levels from mesh elevations, using pipe direction and a configurable search distance."
+  docs: https://github.com/Bipul-roy-AI/Pipe-Culvert-Mesh-Tool#readme
+  description: "Two ArcMap toolboxes that fill pipe and culvert inflow and outflow levels from mesh elevations. The newer Extract Elevation from Elements (1900 pipes) tool reads up to 10 mesh layers, each with its own elevation field, follows the trench from each pipe end to pick the inlet and outlet levels, makes a dated backup first and updates only Z_Inflow and Z_Outflow. The original Populate Pipe Z From Mesh tool uses one mesh and a configurable search distance."
   screenshots:
+    - src: /images/projects/pipe-culvert-mesh-tool/extract-elevation-dialog.png
+      caption: "Extract Elevation from Elements (1900 pipes): choose the pipes, then up to 10 mesh layers with their own elevation fields and the search distances"
+    - src: /images/projects/pipe-culvert-mesh-tool/extract-elevation-run-log.png
+      caption: "Run log: selected pipes are detected, a dated backup is created, then the source pipes are prepared (file paths hidden)"
     - src: /images/projects/pipe-culvert-mesh-tool/populate-pipe-z.png
-      caption: "Populate pipe inflow and outflow levels from mesh polygons"
+      caption: "Populate Pipe Z From Mesh: fill inflow and outflow levels from one mesh layer"
 - name: DHI MIKE Model Crosscheck
   repo: https://github.com/Bipul-roy-AI/DHI_MIKE_m11-mu-m21fm-crosscheck
   description: "ArcMap toolbox that checks pipe and node shapefile values against MIKE 11, MIKE+ and MIKE 21 FM models, with separate CSV reports and M21FM batch processing."
