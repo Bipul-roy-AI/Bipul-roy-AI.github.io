@@ -99,3 +99,10 @@
       caption: "ArcMap toolbox interface for configuring MU node attribute updates"
     - src: https://raw.githubusercontent.com/Bipul-roy-AI/Mike-urban-network-node-updater/main/assets/mu_nodes_attribute_table.png
       caption: "Example MU nodes with populated drainage-network attributes"
+- name: Mike Flood Setup
+  repo: https://github.com/Bipul-roy-AI/Mike-Flood-Setup
+  docs: https://github.com/Bipul-roy-AI/Mike-Flood-Setup#readme
+  description: "ArcMap 10.8 Python toolbox that writes the .couple file for a MIKE FLOOD Classic 2022 model from pipe and node shapefiles, a MIKE 21 FM setup and optional MIKE 11 and MIKE+ models. It builds Standard links along mesh edges, River/Urban links between MIKE 11 branch ends and MIKE+ nodes, and Urban links with inlet areas from node diameters. Results should be checked and validated in the MIKE FLOOD Editor."
+  screenshots:
+    - src: /images/projects/mike-flood-setup/dialog.png
+      caption: "Mike Flood setup: choose the pipe and node shapefiles and the MIKE 21 FM model, optionally add MIKE 11 and MIKE+ models, and set the output .couple file"
