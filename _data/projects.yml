@@ -21,12 +21,6 @@
   docs: https://github.com/Bipul-roy-AI/Health_care_accessibility#readme
   description: "An English–Bangla healthcare directory, map and access study for Bangladesh, built on 39,442 DGHS institution records and the BBS Census 2022. Alongside facility search, road routing and emergency helplines, the Access study measures who can reach care from division to union: straight-line distance, modelled travel time over the Malaria Atlas Project friction surface, inequality (Gini, Lorenz curves) and spatial clusters (Moran's I, LISA). It also assesses flood-disrupted access with satellite flood maps for 2000–2025 (Global Flood Database and Sentinel-1 in Google Earth Engine): inundation maps for every year and eight named floods, how often each place floods, and who loses a hospital or primary care within an hour. Light and dark mode; open data, code and methods in the repository."
   screenshots:
-    - src: /images/projects/shasthopath/directory.png
-      caption: "Institution search, official facility details, a free light basemap, and driving routes"
-    - src: /images/projects/shasthopath/overview.png
-      caption: "National institution distribution with Bangladesh boundary checks, division filters, and a point legend"
-    - src: /images/projects/shasthopath/helplines.png
-      caption: "Bangladesh emergency and national helpline directory with tap-to-call links and service sources"
     - src: /images/projects/shasthopath/access-travel-map.png
       caption: "Average travel time by vehicle to the nearest hospital, by upazila; the Chittagong Hill Tracts and haor basin are among the slowest"
     - src: /images/projects/shasthopath/access-travel-time.png
