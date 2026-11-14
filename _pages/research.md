@@ -10,6 +10,24 @@ I study environmental systems through GIS, hydrodynamic modelling, spatial analy
 
 <div class="research-grid" markdown="0">
 <div class="research-card">
+<a class="research-card-image-link" href="{{ '/research/urban-forestry-geoai/' | relative_url }}" aria-label="Open Urban Forestry GeoAI research results"><img src="{{ '/assets/images/research/urban-forestry/cooling-benefit.webp' | relative_url }}" class="research-thumb research-thumb--map" alt="SOLWEIG afternoon pedestrian radiant temperature in Mott Haven and cooling from 121 new street trees at 20 years" width="800" height="400" loading="lazy"></a>
+<div class="research-body">
+<h2 class="research-title"><a href="{{ '/research/urban-forestry-geoai/' | relative_url }}">Urban Forestry GeoAI | Street-tree siting for heat reduction in New York City</a></h2>
+<p class="research-desc">A geospatial decision pipeline for 121 planting spaces on Third Avenue, Mott Haven (South Bronx): LiDAR, Landsat, ECOSTRESS and Sentinel-2 site characterisation, a sourced 49-species knowledge base, a young-tree failure model, SOLWEIG pedestrian-heat simulation and a multi-objective planting optimiser.</p>
+<p class="research-desc"><strong>Selected results:</strong> A new tree cools nearby sidewalk radiant heat by a median −4.8 °C at 20 years (up to −13 °C), but the corridor mean by only ~1 °C. Site conditions predict young-tree failure better than species (spatial-CV AUC 0.78). An optimised plan keeps ~95% of the cooling with ~29% less allergy/ozone risk. <em>Modelled; not yet field-validated.</em></p>
+<p class="research-links"><a href="{{ '/research/urban-forestry-geoai/' | relative_url }}">View maps, results &amp; limitations →</a> <a href="https://github.com/Bipul-roy-AI/Urban-Forestry-GEOAI">Research data &amp; code ↗</a></p>
+</div>
+</div>
+<div class="research-card">
+<a class="research-card-image-link" href="{{ '/research/shasthopath-access/' | relative_url }}" aria-label="Open ShasthoPath healthcare accessibility research"><img src="{{ '/images/projects/shasthopath/access-travel-map.png' | relative_url }}" class="research-thumb research-thumb--map" alt="Average motorised travel time to the nearest hospital by upazila in Bangladesh" width="800" height="400" loading="lazy"></a>
+<div class="research-body">
+<h2 class="research-title"><a href="{{ '/research/shasthopath-access/' | relative_url }}">ShasthoPath | Healthcare accessibility &amp; flood-disrupted access in Bangladesh</a></h2>
+<p class="research-desc">39,442 DGHS facility records linked to the BBS Census 2022 on a 1 km grid, division to union: distance, Malaria Atlas Project travel time, inequality (Gini, Lorenz), spatial clusters (Moran's I, LISA) and satellite flood maps for 2000–2025 (Global Flood Database, Sentinel-1).</p>
+<p class="research-desc"><strong>Selected results:</strong> Median 7.2 min to any hospital but 49.6 min to a blood bank; upazila Gini up to 0.58 for government beds, with low-access clusters in the Chittagong Hill Tracts and haor belt. In the June–August 2020 flood scenario, 8.4 million people lose a hospital within 60 minutes. <em>A stress test, not a count of people cut off.</em></p>
+<p class="research-links"><a href="{{ '/research/shasthopath-access/' | relative_url }}">View findings, maps &amp; methods →</a> <a href="https://bipul-roy-ai.github.io/Health_care_accessibility/">Live site ↗</a> <a href="https://github.com/Bipul-roy-AI/Health_care_accessibility">Data &amp; code ↗</a></p>
+</div>
+</div>
+<div class="research-card">
 <a class="research-card-image-link" href="{{ '/research/hakaluki-haor/' | relative_url }}" aria-label="Open Hakaluki Haor research results"><img src="https://raw.githubusercontent.com/Bipul-roy-AI/Hakaluki-Haor-Wetland-Methane-Research/main/docs/assets/figures/analysis13/13B_2022_may_expansion_spatial_change.png" class="research-thumb research-thumb--map" alt="Actual Sentinel-1 paired VV/VH change map for Hakaluki Haor in May 2022" width="800" height="400" loading="lazy"></a>
 <div class="research-body">
 <h2 class="research-title"><a href="{{ '/research/hakaluki-haor/' | relative_url }}">Hakaluki Haor | Wetland dynamics &amp; methane observability</a></h2>
